@@ -27,10 +27,9 @@
       "date": "2026-11-18",
       "legs": 8,
       "odds": 52.6,
-      "status": "lost",
+      "status": "pending",
       "ait": 0,
-      "note": "Small stake, big win. Lost on Serie D legs (4:30pm). Losing leg not yet confirmed",
-      "settled_at": "2026-11-18T16:00:00Z"
+      "note": "Small stake, big win. Serie D legs 4:30pm"
     },
     {
       "code": "287P1TW",
