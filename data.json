@@ -1,0 +1,36 @@
+{
+ "updated": "18 Nov 2026, 20:30 EAT",
+ "slips": [
+  {
+   "code": "5AASQJY",
+   "from": "D5Z8SCV",
+   "date": "2026-11-18",
+   "legs": 5,
+   "odds": 2.72,
+   "status": "pending",
+   "ait": 0,
+   "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify."
+  },
+  {
+   "code": "Y69YJPY",
+   "from": "FBVF9Y7",
+   "date": "2026-11-19",
+   "legs": 7,
+   "odds": 3.45,
+   "status": "pending",
+   "ait": 0,
+   "note": "Safest markets. Brazil 2–3:30am, Australia 11:30am."
+  },
+  {
+   "code": "GIN1Y48",
+   "from": "WQ681V9",
+   "date": "2026-11-18",
+   "legs": 8,
+   "odds": 52.6,
+   "status": "pending",
+   "ait": 0,
+   "note": "Small stake, big win. Serie D legs 4:30pm."
+  }
+ ],
+ "favorites": []
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SuperTips Slip Ledger</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Single dark brand world: charcoal + SuperTips green. Header with logo, summary strip + pie, slip table, favourites. Read-only. */
+:root{
+  --bg:#141614; --card:#1d201d; --ink:#f3f5f1; --muted:#a3aa9f; --line:#2e332d;
+  --green:#8dc63f; --won:#8dc63f; --lost:#e2634f; --pending:#8f968b; --void:#6f746c;
+  --display:"Archivo",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font:15px/1.5 var(--body)}
+main{max-width:1040px;margin:0 auto;padding:24px 16px 48px;display:flex;flex-direction:column;gap:24px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:104px;height:104px;border-radius:50%;display:block;box-shadow:0 0 0 3px var(--green)}
+@media (max-width:480px){.brand{flex-direction:column;align-items:flex-start}}
+h1{font:800 26px/1.1 var(--display);margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1 span{color:var(--green)}
+h2{font:600 18px/1.2 var(--display);margin:0 0 12px;text-wrap:balance}
+.sub{color:var(--muted);font-size:13px;margin:4px 0 0;max-width:60ch}
+.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}
+.summary{display:grid;grid-template-columns:1fr 280px;gap:16px}
+@media (max-width:720px){.summary{grid-template-columns:1fr}}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.tile,.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tile .v{font:800 26px/1.15 var(--display);font-variant-numeric:tabular-nums;margin-top:4px}
+.tile.hl{border-color:var(--green)} .tile.hl .v{color:var(--green)}
+.pie{display:flex;flex-direction:column;align-items:center;gap:10px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center;font-size:13px}
+.legend span{display:inline-flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:640px}
+th{text-align:left;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right}
+.code{font-family:var(--mono);font-size:14px;letter-spacing:.04em;color:var(--green)}
+.from{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600;text-transform:capitalize}
+.pill.won{background:var(--won);color:#141614} .pill.lost{background:var(--lost);color:#fff} .pill.pending{background:var(--pending);color:#141614} .pill.void{background:var(--void);color:#fff}
+.note{color:var(--muted);font-size:13px}
+.empty{color:var(--muted);padding:12px 0}
+.mk{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:6px;border:1px solid var(--green);color:var(--green);margin:0 4px 4px 0}
+footer{font-size:12px;color:var(--muted);line-height:1.6}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="SuperTips Football Data logo">
+      <div>
+        <h1>SuperTips <span>Slip Ledger</span></h1>
+        <p class="sub">Every slip posted by SuperTips Football Data: legs, odds and result. AIT (imaginary tokens, no cash value): 10 per tweaked slip that lands.</p>
+      </div>
+    </div>
+    <div class="status" id="status" role="status"><i></i><span id="status-text">Updated 18 Nov 2026, 20:30 EAT</span></div>
+  </header>
+
+  <section class="summary" aria-label="Summary">
+    <div class="tiles">
+      <div class="tile"><div class="k">Slips</div><div class="v" id="t-total">0</div></div>
+      <div class="tile"><div class="k">Won</div><div class="v" id="t-won">0</div></div>
+      <div class="tile"><div class="k">Lost</div><div class="v" id="t-lost">0</div></div>
+      <div class="tile"><div class="k">Pending</div><div class="v" id="t-pending">0</div></div>
+      <div class="tile hl"><div class="k">Win rate</div><div class="v" id="t-rate">–</div></div>
+      <div class="tile"><div class="k">AIT earned</div><div class="v" id="t-ait">0</div></div>
+    </div>
+    <div class="panel pie">
+      <svg id="pie" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Won versus lost slips"></svg>
+      <div class="legend" id="legend"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Slips</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Date</th><th>Code</th><th>Tweaked from</th><th class="num">Legs</th><th class="num">Odds</th><th>Status</th><th class="num">AIT</th><th>Note</th></tr></thead>
+        <tbody id="slips"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Favourite teams by market</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Team</th><th>League</th><th>Strong markets</th><th>Why</th></tr></thead>
+        <tbody id="favs"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>Join the channel for daily slips and live results: <a href="https://t.me/SuperTipsBetpawaFootball" style="color:var(--green);font-weight:600">t.me/SuperTipsBetpawaFootball</a><br>View only. Results are recorded by SuperTips Football Data and cannot be edited from this page. Not affiliated with betPawa. 18+ | 25+ in Uganda | No guarantees. Bet only what you can afford to lose.<br>© All rights to change and update information are reserved only to Mila Junior 2026 and associates.</footer>
+</main>
+<script id="snapshot" type="application/json">{"updated": "18 Nov 2026, 20:30 EAT", "slips": [{"code": "5AASQJY", "from": "D5Z8SCV", "date": "2026-11-18", "legs": 5, "odds": 2.72, "status": "pending", "ait": 0, "note": "Safest markets. Real Madrid W 8:45pm first kickoff."}, {"code": "Y69YJPY", "from": "FBVF9Y7", "date": "2026-11-19", "legs": 7, "odds": 3.45, "status": "pending", "ait": 0, "note": "Safest markets. Brazil 2–3:30am, Australia 11:30am."}, {"code": "GIN1Y48", "from": "WQ681V9", "date": "2026-11-18", "legs": 8, "odds": 52.6, "status": "pending", "ait": 0, "note": "Small stake, big win. Serie D legs 4:30pm."}], "favorites": []}</script>
+<script>
+(function(){
+  var COLORS={won:"--won",lost:"--lost",pending:"--pending",void:"--void"};
+  function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c];});}
+  var snap={slips:[],favorites:[]};
+  try{snap=JSON.parse(document.getElementById("snapshot").textContent);}catch(e){}
+  var slips=snap.slips||[],favs=snap.favorites||[];
+  var stText=document.getElementById("status-text");
+
+  function render(){
+    var c={won:0,lost:0,pending:0,void:0},ait=0;
+    slips.forEach(function(s){var st=c.hasOwnProperty(s.status)?s.status:"pending";c[st]++;ait+=Number(s.ait)||0;});
+    var settled=c.won+c.lost;
+    document.getElementById("t-total").textContent=slips.length;
+    document.getElementById("t-won").textContent=c.won;
+    document.getElementById("t-lost").textContent=c.lost;
+    document.getElementById("t-pending").textContent=c.pending;
+    document.getElementById("t-rate").textContent=settled?Math.round(c.won/settled*100)+"%":"–";
+    document.getElementById("t-ait").textContent=ait;
+    drawPie(c);
+    var tb=document.getElementById("slips");
+    if(!slips.length){tb.innerHTML='<tr><td colspan="8" class="empty">No slips yet.</td></tr>';}
+    else{
+      tb.innerHTML=slips.slice().sort(function(a,b){return String(b.date||"").localeCompare(String(a.date||""));}).map(function(s){
+        var st=COLORS[s.status]?s.status:"pending",odds=Number(s.odds);
+        return "<tr><td>"+esc(s.date)+"</td><td class='code'>"+esc(s.code)+"</td><td class='from'>"+esc(s.from||"new")+"</td><td class='num'>"+esc(s.legs)+"</td><td class='num'>"+(isFinite(odds)?odds.toFixed(2):esc(s.odds))+"</td><td><span class='pill "+st+"'>"+st+"</span></td><td class='num'>"+(Number(s.ait)||0)+"</td><td class='note'>"+esc(s.note)+"</td></tr>";
+      }).join("");
+    }
+    var fb=document.getElementById("favs");
+    if(!favs.length){fb.innerHTML='<tr><td colspan="4" class="empty">No favourites recorded yet.</td></tr>';}
+    else{
+      fb.innerHTML=favs.slice().sort(function(a,b){return String(a.league||"").localeCompare(String(b.league||""))||String(a.team||"").localeCompare(String(b.team||""));}).map(function(f){
+        var mk=(Array.isArray(f.markets)?f.markets:[]).map(function(m){return "<span class='mk'>"+esc(m)+"</span>";}).join("");
+        return "<tr><td><strong>"+esc(f.team)+"</strong></td><td>"+esc(f.league)+"</td><td>"+mk+"</td><td class='note'>"+esc(f.why)+"</td></tr>";
+      }).join("");
+    }
+  }
+  function drawPie(c){
+    var svg=document.getElementById("pie"),leg=document.getElementById("legend");
+    var keys=["won","lost","pending","void"],parts=keys.filter(function(k){return c[k]>0;});
+    var total=parts.reduce(function(t,k){return t+c[k];},0),cx=90,cy=90,r=80,ri=48,html="";
+    if(!total){html="<circle cx='90' cy='90' r='64' fill='none' stroke='"+css("--line")+"' stroke-width='32'/>";}
+    else if(parts.length===1){html="<circle cx='90' cy='90' r='64' fill='none' stroke='"+css(COLORS[parts[0]])+"' stroke-width='32'/>";}
+    else{
+      var a0=-Math.PI/2;
+      parts.forEach(function(k){
+        var a1=a0+c[k]/total*Math.PI*2,large=(a1-a0)>Math.PI?1:0;
+        var p=function(rad,a){return (cx+rad*Math.cos(a)).toFixed(2)+" "+(cy+rad*Math.sin(a)).toFixed(2);};
+        html+="<path d='M"+p(r,a0)+" A"+r+" "+r+" 0 "+large+" 1 "+p(r,a1)+" L"+p(ri,a1)+" A"+ri+" "+ri+" 0 "+large+" 0 "+p(ri,a0)+" Z' fill='"+css(COLORS[k])+"' stroke='"+css("--card")+"' stroke-width='2'/>";
+        a0=a1;
+      });
+    }
+    var settled=c.won+c.lost;
+    html+="<text x='90' y='88' text-anchor='middle' font-family='Archivo, sans-serif' font-weight='800' font-size='24' fill='"+css("--ink")+"'>"+(settled?Math.round(c.won/settled*100)+"%":"–")+"</text>";
+    html+="<text x='90' y='108' text-anchor='middle' font-size='11' fill='"+css("--muted")+"'>won of settled</text>";
+    svg.innerHTML=html;
+    leg.innerHTML=keys.map(function(k){var pct=total?Math.round(c[k]/total*100):0;return "<span><i class='dot' style='background:var("+COLORS[k]+")'></i>"+k[0].toUpperCase()+k.slice(1)+" "+c[k]+" ("+pct+"%)</span>";}).join("");
+  }
+  render();
+
+  fetch("data.json?ts="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+    slips=d.slips||[];favs=d.favorites||[];render();
+    if(d.updated)stText.textContent="Updated "+d.updated;
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>
