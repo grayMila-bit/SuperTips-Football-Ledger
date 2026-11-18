@@ -1,5 +1,5 @@
 {
- "updated": "18 Nov 2026, 21:45 EAT",
+ "updated": "18 Nov 2026, 21:50 EAT",
  "slips": [
   {
    "code": "5AASQJY",
@@ -50,6 +50,26 @@
    "status": "won",
    "ait": 0,
    "note": "Nations League O/U + DC 1UP slip, all 8 legs won."
+  },
+  {
+   "code": "Bet 13896443206",
+   "from": "Amirine",
+   "date": "2026-11-17",
+   "legs": 9,
+   "odds": 16.38,
+   "status": "lost",
+   "ait": 0,
+   "note": "Internationals/U21 1X2 slip: 5 won, 4 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2)."
+  },
+  {
+   "code": "Bet 13896521373",
+   "from": "Amirine",
+   "date": "2026-11-17",
+   "legs": 7,
+   "odds": 18.89,
+   "status": "lost",
+   "ait": 0,
+   "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
   }
  ],
  "favorites": []
