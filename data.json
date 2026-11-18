@@ -1,5 +1,5 @@
 {
- "updated": "18 Nov 2026, 21:50 EAT",
+ "updated": "18 Nov 2026, 22:00 EAT",
  "slips": [
   {
    "code": "5AASQJY",
@@ -38,7 +38,7 @@
    "legs": 8,
    "odds": 4.94,
    "status": "won",
-   "ait": 0,
+   "ait": 10,
    "note": "Nations League O/U + BTTS slip, all 8 legs won (Denmark 2-3 Norway, Wales 2-3 Portugal)."
   },
   {
@@ -48,7 +48,7 @@
    "legs": 8,
    "odds": 3.43,
    "status": "won",
-   "ait": 0,
+   "ait": 10,
    "note": "Nations League O/U + DC 1UP slip, all 8 legs won."
   },
   {
