@@ -1,5 +1,5 @@
 {
- "updated": "18 Nov 2026, 20:30 EAT",
+ "updated": "18 Nov 2026, 21:45 EAT",
  "slips": [
   {
    "code": "5AASQJY",
@@ -30,6 +30,26 @@
    "status": "pending",
    "ait": 0,
    "note": "Small stake, big win. Serie D legs 4:30pm."
+  },
+  {
+   "code": "287P1TW",
+   "from": "new",
+   "date": "2026-11-17",
+   "legs": 8,
+   "odds": 4.94,
+   "status": "won",
+   "ait": 0,
+   "note": "Nations League O/U + BTTS slip, all 8 legs won (Denmark 2-3 Norway, Wales 2-3 Portugal)."
+  },
+  {
+   "code": "Bet 13896497278",
+   "from": "Amirine",
+   "date": "2026-11-17",
+   "legs": 8,
+   "odds": 3.43,
+   "status": "won",
+   "ait": 0,
+   "note": "Nations League O/U + DC 1UP slip, all 8 legs won."
   }
  ],
  "favorites": []
