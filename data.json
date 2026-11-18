@@ -1,76 +1,87 @@
 {
- "updated": "18 Nov 2026, 22:00 EAT",
- "slips": [
-  {
-   "code": "5AASQJY",
-   "from": "D5Z8SCV",
-   "date": "2026-11-18",
-   "legs": 5,
-   "odds": 2.72,
-   "status": "pending",
-   "ait": 0,
-   "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify."
-  },
-  {
-   "code": "Y69YJPY",
-   "from": "FBVF9Y7",
-   "date": "2026-11-19",
-   "legs": 7,
-   "odds": 3.45,
-   "status": "pending",
-   "ait": 0,
-   "note": "Safest markets. Brazil 2–3:30am, Australia 11:30am."
-  },
-  {
-   "code": "GIN1Y48",
-   "from": "WQ681V9",
-   "date": "2026-11-18",
-   "legs": 8,
-   "odds": 52.6,
-   "status": "pending",
-   "ait": 0,
-   "note": "Small stake, big win. Serie D legs 4:30pm."
-  },
-  {
-   "code": "287P1TW",
-   "from": "new",
-   "date": "2026-11-17",
-   "legs": 8,
-   "odds": 4.94,
-   "status": "won",
-   "ait": 10,
-   "note": "Nations League O/U + BTTS slip, all 8 legs won (Denmark 2-3 Norway, Wales 2-3 Portugal)."
-  },
-  {
-   "code": "Bet 13896497278",
-   "from": "Amirine",
-   "date": "2026-11-17",
-   "legs": 8,
-   "odds": 3.43,
-   "status": "won",
-   "ait": 10,
-   "note": "Nations League O/U + DC 1UP slip, all 8 legs won."
-  },
-  {
-   "code": "Bet 13896443206",
-   "from": "Amirine",
-   "date": "2026-11-17",
-   "legs": 9,
-   "odds": 16.38,
-   "status": "lost",
-   "ait": 0,
-   "note": "Internationals/U21 1X2 slip: 5 won, 4 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2)."
-  },
-  {
-   "code": "Bet 13896521373",
-   "from": "Amirine",
-   "date": "2026-11-17",
-   "legs": 7,
-   "odds": 18.89,
-   "status": "lost",
-   "ait": 0,
-   "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
-  }
- ],
- "favorites": []
+  "updated": "18 Nov 2026, 22:00 EAT",
+  "slips": [
+    {
+      "code": "5AASQJY",
+      "from": "D5Z8SCV",
+      "date": "2026-11-18",
+      "legs": 5,
+      "odds": 2.72,
+      "status": "pending",
+      "ait": 0,
+      "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify."
+    },
+    {
+      "code": "Y69YJPY",
+      "from": "FBVF9Y7",
+      "date": "2026-11-19",
+      "legs": 7,
+      "odds": 3.45,
+      "status": "pending",
+      "ait": 0,
+      "note": "Safest markets. Brazil 2\u20133:30am, Australia 11:30am."
+    },
+    {
+      "code": "GIN1Y48",
+      "from": "WQ681V9",
+      "date": "2026-11-18",
+      "legs": 8,
+      "odds": 52.6,
+      "status": "lost",
+      "ait": 0,
+      "note": "Small stake, big win. Lost on Serie D legs (4:30pm). Losing leg not yet confirmed",
+      "settled_at": "2026-11-18T16:00:00Z"
+    },
+    {
+      "code": "287P1TW",
+      "from": "new",
+      "date": "2026-11-17",
+      "legs": 8,
+      "odds": 4.94,
+      "status": "won",
+      "ait": 10,
+      "note": "Nations League O/U + BTTS slip, all 8 legs won (Denmark 2-3 Norway, Wales 2-3 Portugal)."
+    },
+    {
+      "code": "Bet 13896497278",
+      "from": "Amirine",
+      "date": "2026-11-17",
+      "legs": 8,
+      "odds": 3.43,
+      "status": "won",
+      "ait": 10,
+      "note": "Nations League O/U + DC 1UP slip, all 8 legs won."
+    },
+    {
+      "code": "Bet 13896443206",
+      "from": "Amirine",
+      "date": "2026-11-17",
+      "legs": 9,
+      "odds": 16.38,
+      "status": "lost",
+      "ait": 0,
+      "note": "Internationals/U21 1X2 slip: 5 won, 4 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2)."
+    },
+    {
+      "code": "Bet 13896521373",
+      "from": "Amirine",
+      "date": "2026-11-17",
+      "legs": 7,
+      "odds": 18.89,
+      "status": "lost",
+      "ait": 0,
+      "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
+    },
+    {
+      "code": "TQIPFQC",
+      "from": "Kirikuu20 X post (TopBet NEX7Y) rebuilt on betPawa",
+      "date": "2026-11-20",
+      "legs": 33,
+      "odds": 10.4,
+      "status": "pending",
+      "ait": 0,
+      "note": "33 team-to-score legs; weakest Gent, Montpellier, Atletico"
+    }
+  ],
+  "favorites": []
 }
