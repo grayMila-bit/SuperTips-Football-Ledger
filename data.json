@@ -22,16 +22,6 @@
       "note": "Safest markets. Brazil 2\u20133:30am, Australia 11:30am."
     },
     {
-      "code": "GIN1Y48",
-      "from": "WQ681V9",
-      "date": "2026-11-18",
-      "legs": 8,
-      "odds": 52.6,
-      "status": "pending",
-      "ait": 0,
-      "note": "Small stake, big win. Serie D legs 4:30pm"
-    },
-    {
       "code": "287P1TW",
       "from": "new",
       "date": "2026-11-17",
@@ -70,16 +60,6 @@
       "status": "lost",
       "ait": 0,
       "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
-    },
-    {
-      "code": "TQIPFQC",
-      "from": "Kirikuu20 X post (TopBet NEX7Y) rebuilt on betPawa",
-      "date": "2026-11-20",
-      "legs": 33,
-      "odds": 10.4,
-      "status": "pending",
-      "ait": 0,
-      "note": "33 team-to-score legs; weakest Gent, Montpellier, Atletico"
     }
   ],
   "favorites": []
