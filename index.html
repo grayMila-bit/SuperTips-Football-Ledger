@@ -91,6 +91,8 @@ td.num,th.num{text-align:right}
 .copy{font:600 12px var(--body);background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer}
 .copy:hover{border-color:var(--green)}
 .empty{color:var(--muted);padding:12px 0}
+.ait-pos{color:var(--won);font-weight:700} .ait-neg{color:var(--lost);font-weight:700}
+#ait-sec table{min-width:0;font-size:13px} #ait-sec th,#ait-sec td{padding:8px 6px} #ait-sec td{font-variant-numeric:tabular-nums} #ait-sec .code{font-size:12px;word-break:break-all}
 footer{font-size:12px;color:var(--muted);line-height:1.6}
 </style>
 </head>
@@ -101,7 +103,7 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
       <img src="logo.png" alt="SuperTips Football Data logo">
       <div>
         <h1>SuperTips <span>Slip Ledger</span></h1>
-        <p class="sub">Every slip posted by SuperTips Football Data: legs, odds and result. AIT (imaginary tokens, no cash value): 10 for every reviewed slip that lands.</p>
+        <p class="sub">Every slip posted by SuperTips Football Data: legs, odds and result. AIT (imaginary tokens, no cash value): +10 for every reviewed slip that wins, −2 for every slip that loses.</p>
       </div>
     </div>
     <div class="status" id="status" role="status"><i></i><span id="status-text">Updated 18 Nov 2026, 20:30 EAT</span></div>
@@ -114,12 +116,18 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
       <button class="tile" data-f="lost" aria-pressed="false"><div class="k">Lost</div><div class="v" id="t-lost">0</div></button>
       <button class="tile" data-f="pending" aria-pressed="false"><div class="k">Pending</div><div class="v" id="t-pending">0</div></button>
       <div class="tile hl" style="cursor:default"><div class="k">Win rate</div><div class="v" id="t-rate">–</div></div>
-      <div class="tile" style="cursor:default"><div class="k">AIT earned</div><div class="v" id="t-ait">0</div></div>
+      <button class="tile" id="ait-btn" aria-controls="ait-sec"><div class="k">AIT balance</div><div class="v" id="t-ait">0</div></button>
     </div>
     <div class="panel pie">
       <svg id="pie" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Won versus lost slips"></svg>
       <div class="legend" id="legend"></div>
     </div>
+  </section>
+
+  <section class="panel" id="ait-sec" hidden>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px"><h2 style="margin:0">AIT balance statement</h2><button class="copy" id="ait-close">Close</button></div>
+    <p class="note" style="margin:0 0 10px">+10 AIT for each winning slip, −2 AIT for each losing slip. Pending slips don't count yet.</p>
+    <div class="tablewrap"><table style="min-width:0"><thead><tr><th>Date</th><th>Slip</th><th>Result</th><th class="num">AIT</th><th class="num">Balance</th></tr></thead><tbody id="ait-rows"></tbody></table></div>
   </section>
 
   <section class="panel" id="slips-sec">
@@ -186,7 +194,7 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
           "<div class='box'><span class='lbl'>Odds</span><span class='odds'>"+(isFinite(odds)?odds.toFixed(2):esc(s.odds))+"</span></div>"+
         "</button>"+
         "<div class='detail' id='"+id+"'>"+legHtml+noteHtml+
-          "<div class='meta'><span>Logged "+esc(s.date)+"</span>"+(st==="won"?"<span class='ait'>+"+(Number(s.ait)||0)+" AIT</span>":"")+"<button class='copy' data-copy='"+esc(s.code)+"'>Copy code</button></div>"+
+          "<div class='meta'><span>Logged "+esc(s.date)+"</span>"+(st==="won"?"<span class='ait'>+10 AIT</span>":st==="lost"?"<span style='color:var(--lost);font-weight:600'>−2 AIT</span>":"")+"<button class='copy' data-copy='"+esc(s.code)+"'>Copy code</button></div>"+
         "</div></article>";
     }).join("");
   }
@@ -197,23 +205,36 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
   }
   document.addEventListener("click",function(e){
     var fb=e.target.closest("[data-f]");
-    if(fb){setFilter(fb.getAttribute("data-f"));if(fb.classList.contains("tile"))document.getElementById("slips-sec").scrollIntoView({behavior:"smooth"});return;}
+    if(fb){var f=fb.getAttribute("data-f");
+      if(fb.classList.contains("tile")){openSet={};slips.forEach(function(s){var st=COLORS[s.status]?s.status:"pending";if(f!=="all"&&st===f)openSet[s.code]=true;});document.getElementById("ait-sec").hidden=true;}
+      setFilter(f);
+      if(fb.classList.contains("tile"))document.getElementById("slips-sec").scrollIntoView({behavior:"smooth",block:"start"});return;}
+    if(e.target.closest("#ait-btn")){var sec=document.getElementById("ait-sec");sec.hidden=false;sec.scrollIntoView({behavior:"smooth",block:"start"});return;}
+    if(e.target.closest("#ait-close")){document.getElementById("ait-sec").hidden=true;return;}
     var cp=e.target.closest(".copy");
     if(cp){var t=cp.getAttribute("data-copy");try{navigator.clipboard.writeText(t).then(function(){cp.textContent="Copied";setTimeout(function(){cp.textContent="Copy code";},1500);});}catch(_){}return;}
     var hd=e.target.closest(".slip-head");
     if(hd){var code=hd.getAttribute("data-code"),card=hd.parentNode,o=!card.classList.contains("open");
       card.classList.toggle("open",o);hd.setAttribute("aria-expanded",o);openSet[code]=o;}
   });
+  function renderStatement(){
+    var rows=slips.filter(function(s){return s.status==="won"||s.status==="lost";})
+      .map(function(s){return {d:String(s.settled_at||s.date||""),date:s.date,code:s.code,st:s.status,a:s.status==="won"?10:-2};})
+      .sort(function(a,b){return a.d.localeCompare(b.d)||String(a.code).localeCompare(String(b.code));});
+    var bal=0,html=rows.map(function(r){bal+=r.a;return "<tr><td style='white-space:nowrap'>"+esc(String(r.date||"").slice(8,10)+"/"+String(r.date||"").slice(5,7))+"</td><td class='code'>"+esc(r.code)+"</td><td><span class='pill "+r.st+"'>"+r.st+"</span></td><td class='num "+(r.a>0?"ait-pos":"ait-neg")+"'>"+(r.a>0?"+":"−")+Math.abs(r.a)+"</td><td class='num'><strong>"+bal+"</strong></td></tr>";});
+    document.getElementById("ait-rows").innerHTML=html.length?html.reverse().join(""):"<tr><td colspan='5' class='empty'>No settled slips yet.</td></tr>";
+    return bal;
+  }
   function render(){
     var c={won:0,lost:0,pending:0,void:0},ait=0;
-    slips.forEach(function(s){var st=c.hasOwnProperty(s.status)?s.status:"pending";c[st]++;ait+=Number(s.ait)||0;});
+    slips.forEach(function(s){var st=c.hasOwnProperty(s.status)?s.status:"pending";c[st]++;});
     var settled=c.won+c.lost;
     document.getElementById("t-total").textContent=slips.length;
     document.getElementById("t-won").textContent=c.won;
     document.getElementById("t-lost").textContent=c.lost;
     document.getElementById("t-pending").textContent=c.pending;
     document.getElementById("t-rate").textContent=settled?Math.round(c.won/settled*100)+"%":"–";
-    document.getElementById("t-ait").textContent=ait;
+    document.getElementById("t-ait").textContent=renderStatement();
     drawPie(c);
     ["all","pending","won","lost"].forEach(function(k){var e=document.getElementById("f-"+k);if(e)e.textContent=k==="all"?slips.length:c[k];});
     renderCards();

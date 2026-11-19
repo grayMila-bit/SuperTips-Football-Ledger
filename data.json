@@ -56,7 +56,7 @@
       "legs": 7,
       "odds": 3.43,
       "status": "lost",
-      "ait": 0,
+      "ait": -2,
       "note": "Safest markets: 5 won, 2 lost (Gremio 0-0 Bahia Over 1.5; Lions 1-1 Wollongong DC 12). Remo, Flamengo, Cruzeiro, Corinthians, Preston won.",
       "settled_at": "2026-11-19T10:30:00Z",
       "legsList": [
@@ -138,7 +138,7 @@
       "legs": 9,
       "odds": 16.38,
       "status": "lost",
-      "ait": 0,
+      "ait": -2,
       "note": "Internationals/U21 1X2 slip: 5 won, 4 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2)."
     },
     {
@@ -148,7 +148,7 @@
       "legs": 7,
       "odds": 18.89,
       "status": "lost",
-      "ait": 0,
+      "ait": -2,
       "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
     },
     {
