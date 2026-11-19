@@ -54,6 +54,43 @@ td.num,th.num{text-align:right}
 .note{color:var(--muted);font-size:13px}
 .empty{color:var(--muted);padding:12px 0}
 .mk{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:6px;border:1px solid var(--green);color:var(--green);margin:0 4px 4px 0}
+
+/* Slip cards (My-bets style) */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.fbtn{font:600 13px var(--body);color:var(--ink);background:#262a26;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;min-height:36px;transition:background .15s,border-color .15s}
+.fbtn:hover{border-color:var(--green)}
+.fbtn[aria-pressed="true"]{background:var(--green);color:#141614;border-color:var(--green)}
+.fbtn .n{opacity:.75;margin-left:4px;font-variant-numeric:tabular-nums}
+.tile{cursor:pointer;text-align:left;font:inherit;color:inherit;transition:border-color .15s,transform .1s}
+.tile:hover{border-color:var(--green)} .tile:active{transform:scale(.98)}
+.tile[aria-pressed="true"]{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.cards{display:flex;flex-direction:column;gap:12px}
+.slip{background:#232723;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.slip.won{border-left:4px solid var(--won)} .slip.lost{border-left:4px solid var(--lost)} .slip.pending{border-left:4px solid var(--pending)} .slip.void{border-left:4px solid var(--void)}
+.slip-head{all:unset;box-sizing:border-box;display:block;width:100%;padding:14px 16px;cursor:pointer}
+.slip-head:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+.row1{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.title{font:700 17px/1.2 var(--display);display:flex;align-items:center;gap:8px}
+.cnt{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:999px;background:#141614;font:600 13px var(--body)}
+.row2{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px;color:var(--muted);font-size:13px}
+.row2 .code{font-size:13px}
+.box{display:flex;justify-content:space-between;align-items:center;background:#181b18;border-radius:10px;padding:10px 14px;margin-top:12px}
+.box .lbl{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.box .odds{font:800 20px var(--display);font-variant-numeric:tabular-nums}
+.chev{transition:transform .2s;color:var(--muted);font-size:14px}
+.slip-head[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.detail{display:none;border-top:1px solid var(--line)}
+.slip.open .detail{display:block}
+.leg{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.leg:last-child{border-bottom:0}
+.leg .m{font-weight:600}
+.leg .mk2{font-weight:700;margin-top:2px}
+.leg .o{font:700 15px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.meta{padding:12px 16px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;text-align:center}
+.meta .ait{color:var(--green);font-weight:600}
+.copy{font:600 12px var(--body);background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer}
+.copy:hover{border-color:var(--green)}
+.empty{color:var(--muted);padding:12px 0}
 footer{font-size:12px;color:var(--muted);line-height:1.6}
 </style>
 </head>
@@ -72,12 +109,12 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
 
   <section class="summary" aria-label="Summary">
     <div class="tiles">
-      <div class="tile"><div class="k">Slips</div><div class="v" id="t-total">0</div></div>
-      <div class="tile"><div class="k">Won</div><div class="v" id="t-won">0</div></div>
-      <div class="tile"><div class="k">Lost</div><div class="v" id="t-lost">0</div></div>
-      <div class="tile"><div class="k">Pending</div><div class="v" id="t-pending">0</div></div>
-      <div class="tile hl"><div class="k">Win rate</div><div class="v" id="t-rate">–</div></div>
-      <div class="tile"><div class="k">AIT earned</div><div class="v" id="t-ait">0</div></div>
+      <button class="tile" data-f="all" aria-pressed="true"><div class="k">Slips</div><div class="v" id="t-total">0</div></button>
+      <button class="tile" data-f="won" aria-pressed="false"><div class="k">Won</div><div class="v" id="t-won">0</div></button>
+      <button class="tile" data-f="lost" aria-pressed="false"><div class="k">Lost</div><div class="v" id="t-lost">0</div></button>
+      <button class="tile" data-f="pending" aria-pressed="false"><div class="k">Pending</div><div class="v" id="t-pending">0</div></button>
+      <div class="tile hl" style="cursor:default"><div class="k">Win rate</div><div class="v" id="t-rate">–</div></div>
+      <div class="tile" style="cursor:default"><div class="k">AIT earned</div><div class="v" id="t-ait">0</div></div>
     </div>
     <div class="panel pie">
       <svg id="pie" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Won versus lost slips"></svg>
@@ -85,14 +122,15 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
     </div>
   </section>
 
-  <section class="panel">
+  <section class="panel" id="slips-sec">
     <h2>Slips</h2>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Date</th><th>Code</th><th>Tweaked from</th><th class="num">Legs</th><th class="num">Odds</th><th>Status</th><th class="num">AIT</th><th>Note</th></tr></thead>
-        <tbody id="slips"></tbody>
-      </table>
+    <div class="filters" role="group" aria-label="Filter slips">
+      <button class="fbtn" data-f="all" aria-pressed="true">All<span class="n" id="f-all"></span></button>
+      <button class="fbtn" data-f="pending" aria-pressed="false">Pending<span class="n" id="f-pending"></span></button>
+      <button class="fbtn" data-f="won" aria-pressed="false">Won<span class="n" id="f-won"></span></button>
+      <button class="fbtn" data-f="lost" aria-pressed="false">Lost<span class="n" id="f-lost"></span></button>
     </div>
+    <div class="cards" id="slips"></div>
   </section>
 
   <section class="panel">
@@ -118,6 +156,54 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
   var slips=snap.slips||[],favs=snap.favorites||[];
   var stText=document.getElementById("status-text");
 
+  var filter="all",openSet={};
+  function legsOf(s){
+    if(Array.isArray(s.legsList))return s.legsList;
+    var n=String(s.note||"");
+    var m=n.match(/Legs?:\s*(.+)$/i); if(m)n=m[1];
+    if(n.indexOf(";")<0)return [];
+    var parts=n.split(";").map(function(x){return x.trim();}).filter(Boolean);
+    if(!parts.every(function(x){return /\sv\s|\svs\s/i.test(x);}))return [];
+    return parts.map(function(x){
+      var p=x.match(/^(.*?\bv(?:s)?\b.*?)\s+((?:O|U|Over|Under)\s?\d.*|X2|1X|12|BTTS.*|.*1UP.*|.*win.*|.*to qualify.*|.*DC.*|.*-\d.*)$/i);
+      return p?{match:p[1],market:p[2]}:{match:x,market:""};
+    });
+  }
+  function renderCards(){
+    var box=document.getElementById("slips");
+    var list=slips.slice().sort(function(a,b){return String(b.date||"").localeCompare(String(a.date||""));})
+      .filter(function(s){var st=COLORS[s.status]?s.status:"pending";return filter==="all"||st===filter;});
+    if(!list.length){box.innerHTML="<p class='empty'>No "+(filter==="all"?"":filter+" ")+"slips yet.</p>";return;}
+    box.innerHTML=list.map(function(s,i){
+      var st=COLORS[s.status]?s.status:"pending",odds=Number(s.odds),id="sl-"+esc(s.code).replace(/\W/g,"");
+      var legs=legsOf(s),open=!!openSet[s.code];
+      var legHtml=legs.length?legs.map(function(l){return "<div class='leg'><div><div class='m'>"+esc(l.match)+"</div>"+(l.time?"<div style='color:var(--muted);font-size:12px'>"+esc(l.time)+"</div>":"")+(l.market?"<div class='mk2'>"+esc(l.market)+"</div>":"")+"</div><div class='o'>"+(l.score?"<span style='color:var(--muted);font-weight:500'>"+esc(l.score)+"</span> ":"")+(l.odds?esc(l.odds):"")+"<i class='dot' style='background:var("+COLORS[COLORS[l.r]?l.r:(st==="won"?"won":"pending")]+")'></i></div></div>";}).join(""):"";
+      var noteHtml=(!legs.length||/\b(won|lost|\d-\d)\b/i.test(s.note||""))?"<div class='leg'><div class='note' style='color:var(--ink)'>"+esc(s.note)+"</div></div>":"";
+      return "<article class='slip "+st+(open?" open":"")+"'>"+
+        "<button class='slip-head' aria-expanded='"+open+"' aria-controls='"+id+"' data-code='"+esc(s.code)+"'>"+
+          "<div class='row1'><span class='title'>Multibet <span class='cnt'>"+esc(s.legs)+"</span></span><span style='display:flex;align-items:center;gap:10px'><span class='pill "+st+"'>"+st+"</span><span class='chev' aria-hidden='true'>&#9662;</span></span></div>"+
+          "<div class='row2'><span class='code'>"+esc(s.code)+"</span><span>&middot; "+esc(s.date)+"</span>"+(s.from&&s.from!=="new"?"<span>&middot; from "+esc(s.from)+"</span>":"")+"</div>"+
+          "<div class='box'><span class='lbl'>Odds</span><span class='odds'>"+(isFinite(odds)?odds.toFixed(2):esc(s.odds))+"</span></div>"+
+        "</button>"+
+        "<div class='detail' id='"+id+"'>"+legHtml+noteHtml+
+          "<div class='meta'><span>Logged "+esc(s.date)+"</span>"+(st==="won"?"<span class='ait'>+"+(Number(s.ait)||0)+" AIT</span>":"")+"<button class='copy' data-copy='"+esc(s.code)+"'>Copy code</button></div>"+
+        "</div></article>";
+    }).join("");
+  }
+  function setFilter(f){
+    filter=f;
+    document.querySelectorAll("[data-f]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-f")===f?"true":"false");});
+    renderCards();
+  }
+  document.addEventListener("click",function(e){
+    var fb=e.target.closest("[data-f]");
+    if(fb){setFilter(fb.getAttribute("data-f"));if(fb.classList.contains("tile"))document.getElementById("slips-sec").scrollIntoView({behavior:"smooth"});return;}
+    var cp=e.target.closest(".copy");
+    if(cp){var t=cp.getAttribute("data-copy");try{navigator.clipboard.writeText(t).then(function(){cp.textContent="Copied";setTimeout(function(){cp.textContent="Copy code";},1500);});}catch(_){}return;}
+    var hd=e.target.closest(".slip-head");
+    if(hd){var code=hd.getAttribute("data-code"),card=hd.parentNode,o=!card.classList.contains("open");
+      card.classList.toggle("open",o);hd.setAttribute("aria-expanded",o);openSet[code]=o;}
+  });
   function render(){
     var c={won:0,lost:0,pending:0,void:0},ait=0;
     slips.forEach(function(s){var st=c.hasOwnProperty(s.status)?s.status:"pending";c[st]++;ait+=Number(s.ait)||0;});
@@ -129,14 +215,8 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
     document.getElementById("t-rate").textContent=settled?Math.round(c.won/settled*100)+"%":"–";
     document.getElementById("t-ait").textContent=ait;
     drawPie(c);
-    var tb=document.getElementById("slips");
-    if(!slips.length){tb.innerHTML='<tr><td colspan="8" class="empty">No slips yet.</td></tr>';}
-    else{
-      tb.innerHTML=slips.slice().sort(function(a,b){return String(b.date||"").localeCompare(String(a.date||""));}).map(function(s){
-        var st=COLORS[s.status]?s.status:"pending",odds=Number(s.odds);
-        return "<tr><td>"+esc(s.date)+"</td><td class='code'>"+esc(s.code)+"</td><td class='from'>"+esc(s.from||"new")+"</td><td class='num'>"+esc(s.legs)+"</td><td class='num'>"+(isFinite(odds)?odds.toFixed(2):esc(s.odds))+"</td><td><span class='pill "+st+"'>"+st+"</span></td><td class='num'>"+(Number(s.ait)||0)+"</td><td class='note'>"+esc(s.note)+"</td></tr>";
-      }).join("");
-    }
+    ["all","pending","won","lost"].forEach(function(k){var e=document.getElementById("f-"+k);if(e)e.textContent=k==="all"?slips.length:c[k];});
+    renderCards();
     var fb=document.getElementById("favs");
     if(!favs.length){fb.innerHTML='<tr><td colspan="4" class="empty">No favourites recorded yet.</td></tr>';}
     else{

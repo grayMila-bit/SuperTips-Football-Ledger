@@ -10,7 +10,44 @@
       "status": "won",
       "ait": 10,
       "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify.",
-      "settled_at": "2026-11-18T21:55:00Z"
+      "settled_at": "2026-11-18T21:55:00Z",
+      "legsList": [
+        {
+          "match": "Real Madrid W v Inter W",
+          "market": "Real Madrid W win",
+          "odds": "1.18",
+          "r": "won",
+          "score": "3-1"
+        },
+        {
+          "match": "Utebo v Sabadell",
+          "market": "Sabadell to qualify",
+          "odds": "1.23",
+          "r": "won",
+          "score": "0-3"
+        },
+        {
+          "match": "Alcoyano v Mallorca",
+          "market": "Mallorca 1UP",
+          "odds": "1.25",
+          "r": "won",
+          "score": "0-1"
+        },
+        {
+          "match": "Badajoz v Tenerife",
+          "market": "Tenerife to qualify",
+          "odds": "1.25",
+          "r": "won",
+          "score": "2-5"
+        },
+        {
+          "match": "Forest U21 v Newcastle U21",
+          "market": "Double chance 12",
+          "odds": "1.22",
+          "r": "won",
+          "score": "2-3"
+        }
+      ]
     },
     {
       "code": "Y69YJPY",
@@ -21,7 +58,58 @@
       "status": "lost",
       "ait": 0,
       "note": "Safest markets: 5 won, 2 lost (Gremio 0-0 Bahia Over 1.5; Lions 1-1 Wollongong DC 12). Remo, Flamengo, Cruzeiro, Corinthians, Preston won.",
-      "settled_at": "2026-11-19T10:30:00Z"
+      "settled_at": "2026-11-19T10:30:00Z",
+      "legsList": [
+        {
+          "match": "Remo v Chapecoense",
+          "market": "Double chance 12",
+          "odds": "1.21",
+          "r": "won",
+          "score": "2-0"
+        },
+        {
+          "match": "Flamengo v Paranaense",
+          "market": "Flamengo over 1.5",
+          "odds": "1.22",
+          "r": "won",
+          "score": "2-1"
+        },
+        {
+          "match": "Cruzeiro v Palmeiras",
+          "market": "Over 1.5",
+          "odds": "1.18",
+          "r": "won",
+          "score": "2-1"
+        },
+        {
+          "match": "Gremio v Bahia",
+          "market": "Over 1.5",
+          "odds": "1.18",
+          "r": "lost",
+          "score": "0-0"
+        },
+        {
+          "match": "Corinthians v Botafogo",
+          "market": "Double chance 1X",
+          "odds": "1.22",
+          "r": "won",
+          "score": "4-0"
+        },
+        {
+          "match": "Lions v Wollongong Wolves",
+          "market": "Double chance 12",
+          "odds": "1.20",
+          "r": "lost",
+          "score": "1-1"
+        },
+        {
+          "match": "Preston Lions v South Hobart",
+          "market": "Preston win",
+          "odds": "1.14",
+          "r": "won",
+          "score": "6-0"
+        }
+      ]
     },
     {
       "code": "287P1TW",
@@ -71,7 +159,51 @@
       "odds": 3.05,
       "status": "pending",
       "ait": 0,
-      "note": "Al Ain v Al Dhafra O2.5; Al Ahli Doha v Al-Shamal O1.5; Austria Wien W v Bayern W O2.5; Paris FC W v Koge W O1.5; Celta W v Espanyol W Espanyol 1UP; Arsenal W v Lyon W O1.5; Benfica W v Roma W O1.5"
+      "note": "Al Ain v Al Dhafra O2.5; Al Ahli Doha v Al-Shamal O1.5; Austria Wien W v Bayern W O2.5; Paris FC W v Koge W O1.5; Celta W v Espanyol W Espanyol 1UP; Arsenal W v Lyon W O1.5; Benfica W v Roma W O1.5",
+      "legsList": [
+        {
+          "match": "Al Ain v Al Dhafra",
+          "market": "Over 2.5",
+          "odds": "1.24",
+          "r": "pending"
+        },
+        {
+          "match": "Al Ahli Doha v Al-Shamal",
+          "market": "Over 1.5",
+          "odds": "1.11",
+          "r": "pending"
+        },
+        {
+          "match": "Austria Wien W v Bayern W",
+          "market": "Over 2.5",
+          "odds": "1.25",
+          "r": "pending"
+        },
+        {
+          "match": "Paris FC W v Koge W",
+          "market": "Over 1.5",
+          "odds": "1.14",
+          "r": "pending"
+        },
+        {
+          "match": "Celta W v Espanyol W",
+          "market": "Espanyol 1UP",
+          "odds": "1.21",
+          "r": "pending"
+        },
+        {
+          "match": "Arsenal W v Lyon W",
+          "market": "Over 1.5",
+          "odds": "1.13",
+          "r": "pending"
+        },
+        {
+          "match": "Benfica W v Roma W",
+          "market": "Over 1.5",
+          "odds": "1.14",
+          "r": "pending"
+        }
+      ]
     },
     {
       "code": "NC7H8I0",
@@ -81,7 +213,51 @@
       "odds": 3.32,
       "status": "pending",
       "ait": 0,
-      "note": "Al Ain v Al Dhafra O2.5; Al Okhdood U21 v Al Jabalain U21 O1.5; MB Rouissat v CR Belouizdad Rouissat U1.5; MC Alger v Olympique Akbou U3.5; Boston River v Maldonado X2; Penarol v Cerro Largo 1X; Progreso v MC Torque X2"
+      "note": "Al Ain v Al Dhafra O2.5; Al Okhdood U21 v Al Jabalain U21 O1.5; MB Rouissat v CR Belouizdad Rouissat U1.5; MC Alger v Olympique Akbou U3.5; Boston River v Maldonado X2; Penarol v Cerro Largo 1X; Progreso v MC Torque X2",
+      "legsList": [
+        {
+          "match": "Al Ain v Al Dhafra",
+          "market": "Over 2.5",
+          "odds": "1.26",
+          "r": "pending"
+        },
+        {
+          "match": "Al Okhdood U21 v Al Jabalain U21",
+          "market": "Over 1.5",
+          "odds": "1.21",
+          "r": "pending"
+        },
+        {
+          "match": "MB Rouissat v CR Belouizdad",
+          "market": "Rouissat under 1.5",
+          "odds": "1.15",
+          "r": "pending"
+        },
+        {
+          "match": "MC Alger v Olympique Akbou",
+          "market": "Under 3.5",
+          "odds": "1.17",
+          "r": "pending"
+        },
+        {
+          "match": "Boston River v Maldonado",
+          "market": "Double chance X2",
+          "odds": "1.28",
+          "r": "pending"
+        },
+        {
+          "match": "Penarol v Cerro Largo",
+          "market": "Double chance 1X",
+          "odds": "1.10",
+          "r": "pending"
+        },
+        {
+          "match": "Progreso v MC Torque",
+          "market": "Double chance X2",
+          "odds": "1.15",
+          "r": "pending"
+        }
+      ]
     }
   ],
   "favorites": []
