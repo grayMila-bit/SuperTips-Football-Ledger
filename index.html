@@ -93,6 +93,14 @@ td.num,th.num{text-align:right}
 .empty{color:var(--muted);padding:12px 0}
 .ait-pos{color:var(--won);font-weight:700} .ait-neg{color:var(--lost);font-weight:700}
 #ait-sec table{min-width:0;font-size:13px} #ait-sec th,#ait-sec td{padding:8px 6px} #ait-sec td{font-variant-numeric:tabular-nums} #ait-sec .code{font-size:12px;word-break:break-all}
+.tile.t-all{border-color:#d9ddd5;background:rgba(243,245,241,.06)} .tile.t-all .v{color:var(--ink)}
+.tile.t-won{border-color:var(--won);background:rgba(141,198,63,.12)} .tile.t-won .v,.tile.t-won .k{color:var(--won)}
+.tile.t-lost{border-color:var(--lost);background:rgba(226,99,79,.12)} .tile.t-lost .v,.tile.t-lost .k{color:var(--lost)}
+.tile.t-pending{border-color:var(--pending);background:rgba(143,150,139,.14)} .tile.t-pending .v,.tile.t-pending .k{color:#c4c9c0}
+.tile.hl{background:rgba(141,198,63,.12)} .tile.hl .k{color:var(--green)}
+.tile.t-ait{border-color:var(--won);background:rgba(141,198,63,.12)} .tile.t-ait .v,.tile.t-ait .k{color:var(--won)}
+.tile.t-ait.neg{border-color:var(--lost);background:rgba(226,99,79,.12)} .tile.t-ait.neg .v,.tile.t-ait.neg .k{color:var(--lost)}
+.tile[aria-pressed="true"]{box-shadow:0 0 0 2px currentColor inset}
 footer{font-size:12px;color:var(--muted);line-height:1.6}
 </style>
 </head>
@@ -111,12 +119,12 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
 
   <section class="summary" aria-label="Summary">
     <div class="tiles">
-      <button class="tile" data-f="all" aria-pressed="true"><div class="k">Slips</div><div class="v" id="t-total">0</div></button>
-      <button class="tile" data-f="won" aria-pressed="false"><div class="k">Won</div><div class="v" id="t-won">0</div></button>
-      <button class="tile" data-f="lost" aria-pressed="false"><div class="k">Lost</div><div class="v" id="t-lost">0</div></button>
-      <button class="tile" data-f="pending" aria-pressed="false"><div class="k">Pending</div><div class="v" id="t-pending">0</div></button>
+      <button class="tile t-all" data-f="all" aria-pressed="true"><div class="k">Slips</div><div class="v" id="t-total">0</div></button>
+      <button class="tile t-won" data-f="won" aria-pressed="false"><div class="k">Won</div><div class="v" id="t-won">0</div></button>
+      <button class="tile t-lost" data-f="lost" aria-pressed="false"><div class="k">Lost</div><div class="v" id="t-lost">0</div></button>
+      <button class="tile t-pending" data-f="pending" aria-pressed="false"><div class="k">Pending</div><div class="v" id="t-pending">0</div></button>
       <div class="tile hl" style="cursor:default"><div class="k">Win rate</div><div class="v" id="t-rate">–</div></div>
-      <button class="tile" id="ait-btn" aria-controls="ait-sec"><div class="k">AIT balance</div><div class="v" id="t-ait">0</div></button>
+      <button class="tile t-ait" id="ait-btn" aria-controls="ait-sec"><div class="k">AIT balance</div><div class="v" id="t-ait">0</div></button>
     </div>
     <div class="panel pie">
       <svg id="pie" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Won versus lost slips"></svg>
@@ -234,7 +242,7 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
     document.getElementById("t-lost").textContent=c.lost;
     document.getElementById("t-pending").textContent=c.pending;
     document.getElementById("t-rate").textContent=settled?Math.round(c.won/settled*100)+"%":"–";
-    document.getElementById("t-ait").textContent=renderStatement();
+    var bal=renderStatement();document.getElementById("t-ait").textContent=bal;document.getElementById("ait-btn").classList.toggle("neg",bal<0);
     drawPie(c);
     ["all","pending","won","lost"].forEach(function(k){var e=document.getElementById("f-"+k);if(e)e.textContent=k==="all"?slips.length:c[k];});
     renderCards();
