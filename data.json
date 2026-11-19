@@ -1,25 +1,27 @@
 {
-  "updated": "19 Nov 2026, 17:15 EAT",
+  "updated": "19 Nov 2026, 17:30 EAT",
   "slips": [
     {
       "code": "5AASQJY",
       "from": "D5Z8SCV",
       "date": "2026-11-18",
       "legs": 5,
-      "odds": 2.72,
-      "status": "pending",
-      "ait": 0,
-      "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify."
+      "odds": 2.76,
+      "status": "won",
+      "ait": 10,
+      "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify.",
+      "settled_at": "2026-11-18T21:55:00Z"
     },
     {
       "code": "Y69YJPY",
       "from": "FBVF9Y7",
       "date": "2026-11-19",
       "legs": 7,
-      "odds": 3.45,
-      "status": "pending",
+      "odds": 3.43,
+      "status": "lost",
       "ait": 0,
-      "note": "Safest markets. Brazil 2\u20133:30am, Australia 11:30am."
+      "note": "Safest markets: 5 won, 2 lost (Gremio 0-0 Bahia Over 1.5; Lions 1-1 Wollongong DC 12). Remo, Flamengo, Cruzeiro, Corinthians, Preston won.",
+      "settled_at": "2026-11-19T10:30:00Z"
     },
     {
       "code": "287P1TW",
