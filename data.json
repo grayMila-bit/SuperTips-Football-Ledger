@@ -1,5 +1,5 @@
 {
-  "updated": "18 Nov 2026, 22:00 EAT",
+  "updated": "19 Nov 2026, 17:15 EAT",
   "slips": [
     {
       "code": "5AASQJY",
@@ -60,6 +60,16 @@
       "status": "lost",
       "ait": 0,
       "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
+    },
+    {
+      "code": "IAOZYVO",
+      "from": "AAO8LDU",
+      "date": "2026-11-19",
+      "legs": 7,
+      "odds": 3.05,
+      "status": "pending",
+      "ait": 0,
+      "note": "Al Ain v Al Dhafra O2.5; Al Ahli Doha v Al-Shamal O1.5; Austria Wien W v Bayern W O2.5; Paris FC W v Koge W O1.5; Celta W v Espanyol W Espanyol 1UP; Arsenal W v Lyon W O1.5; Benfica W v Roma W O1.5"
     }
   ],
   "favorites": []
