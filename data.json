@@ -1,5 +1,5 @@
 {
-  "updated": "19 Nov 2026, 18:05 EAT",
+  "updated": "2026-11-20T12:45:32Z",
   "slips": [
     {
       "code": "5AASQJY",
@@ -157,53 +157,61 @@
       "date": "2026-11-19",
       "legs": 7,
       "odds": 3.05,
-      "status": "pending",
-      "ait": 0,
-      "note": "Al Ain v Al Dhafra O2.5; Al Ahli Doha v Al-Shamal O1.5; Austria Wien W v Bayern W O2.5; Paris FC W v Koge W O1.5; Celta W v Espanyol W Espanyol 1UP; Arsenal W v Lyon W O1.5; Benfica W v Roma W O1.5",
+      "status": "won",
+      "ait": 10,
+      "note": "Won: all 7 legs. Al Ain v Al Dhafra O2.5 (2-1); Al Ahli Doha v Al-Shamal O1.5 (1-1); Austria Wien W v Bayern W O2.5 (0-4); Paris FC W v Koge W O1.5 (2-1); Celta W v Espanyol W Espanyol 1UP (2-1, Espanyol led first); Arsenal W v Lyon W O1.5 (0-2); Benfica W v Roma W O1.5 (2-3)",
       "legsList": [
         {
+          "market": "Over 2.5",
           "match": "Al Ain v Al Dhafra",
-          "market": "Over 2.5",
           "odds": "1.24",
-          "r": "pending"
+          "r": "won",
+          "score": "2-1"
         },
         {
+          "market": "Over 1.5",
           "match": "Al Ahli Doha v Al-Shamal",
-          "market": "Over 1.5",
           "odds": "1.11",
-          "r": "pending"
+          "r": "won",
+          "score": "1-1"
         },
         {
-          "match": "Austria Wien W v Bayern W",
           "market": "Over 2.5",
+          "match": "Austria Wien W v Bayern W",
           "odds": "1.25",
-          "r": "pending"
+          "r": "won",
+          "score": "0-4"
         },
         {
+          "market": "Over 1.5",
           "match": "Paris FC W v Koge W",
-          "market": "Over 1.5",
           "odds": "1.14",
-          "r": "pending"
+          "r": "won",
+          "score": "2-1"
         },
         {
-          "match": "Celta W v Espanyol W",
           "market": "Espanyol 1UP",
+          "match": "Celta W v Espanyol W",
           "odds": "1.21",
-          "r": "pending"
+          "r": "won",
+          "score": "2-1"
         },
         {
+          "market": "Over 1.5",
           "match": "Arsenal W v Lyon W",
-          "market": "Over 1.5",
           "odds": "1.13",
-          "r": "pending"
+          "r": "won",
+          "score": "0-2"
         },
         {
-          "match": "Benfica W v Roma W",
           "market": "Over 1.5",
+          "match": "Benfica W v Roma W",
           "odds": "1.14",
-          "r": "pending"
+          "r": "won",
+          "score": "2-3"
         }
-      ]
+      ],
+      "settled_at": "2026-11-19T22:55:00Z"
     },
     {
       "code": "NC7H8I0",
@@ -211,50 +219,135 @@
       "date": "2026-11-19",
       "legs": 7,
       "odds": 3.32,
-      "status": "pending",
-      "ait": 0,
-      "note": "Al Ain v Al Dhafra O2.5; Al Okhdood U21 v Al Jabalain U21 O1.5; MB Rouissat v CR Belouizdad Rouissat U1.5; MC Alger v Olympique Akbou U3.5; Boston River v Maldonado X2; Penarol v Cerro Largo 1X; Progreso v MC Torque X2",
+      "status": "lost",
+      "ait": -2,
+      "note": "Lost: Boston River v Maldonado 1-0 (X2 ✗). Legs: Al Ain v Al Dhafra O2.5; Al Okhdood U21 v Al Jabalain U21 O1.5; MB Rouissat v CR Belouizdad Rouissat U1.5; MC Alger v Olympique Akbou U3.5; Boston River v Maldonado X2; Penarol v Cerro Largo 1X; Progreso v MC Torque X2",
       "legsList": [
         {
-          "match": "Al Ain v Al Dhafra",
           "market": "Over 2.5",
+          "match": "Al Ain v Al Dhafra",
           "odds": "1.26",
-          "r": "pending"
+          "r": "won",
+          "score": "2-1"
         },
         {
-          "match": "Al Okhdood U21 v Al Jabalain U21",
           "market": "Over 1.5",
+          "match": "Al Okhdood U21 v Al Jabalain U21",
           "odds": "1.21",
           "r": "pending"
         },
         {
-          "match": "MB Rouissat v CR Belouizdad",
           "market": "Rouissat under 1.5",
+          "match": "MB Rouissat v CR Belouizdad",
           "odds": "1.15",
-          "r": "pending"
+          "r": "won",
+          "score": "1-0"
         },
         {
-          "match": "MC Alger v Olympique Akbou",
           "market": "Under 3.5",
+          "match": "MC Alger v Olympique Akbou",
           "odds": "1.17",
-          "r": "pending"
+          "r": "won",
+          "score": "0-1"
         },
         {
+          "market": "Double chance X2",
           "match": "Boston River v Maldonado",
-          "market": "Double chance X2",
           "odds": "1.28",
-          "r": "pending"
+          "r": "lost",
+          "score": "1-0"
         },
         {
-          "match": "Penarol v Cerro Largo",
           "market": "Double chance 1X",
+          "match": "Penarol v Cerro Largo",
           "odds": "1.10",
+          "r": "won",
+          "score": "3-0"
+        },
+        {
+          "market": "Double chance X2",
+          "match": "Progreso v MC Torque",
+          "odds": "1.15",
+          "r": "won",
+          "score": "1-1"
+        }
+      ],
+      "settled_at": "2026-11-19T21:58:00Z"
+    },
+    {
+      "code": "U33POBA",
+      "from": "new",
+      "date": "2026-11-20",
+      "legs": 11,
+      "odds": 37.83,
+      "status": "pending",
+      "ait": 0,
+      "note": "Small stake, big win (Friday). Approved and posted to channel 20 Nov.",
+      "legsList": [
+        {
+          "match": "Shakhtar v Livyi Bereh",
+          "market": "Shakhtar win & Over 1.5",
+          "odds": "1.46",
           "r": "pending"
         },
         {
-          "match": "Progreso v MC Torque",
-          "market": "Double chance X2",
-          "odds": "1.15",
+          "match": "Darmstadt v Heidenheim",
+          "market": "Heidenheim 1UP",
+          "odds": "1.48",
+          "r": "pending"
+        },
+        {
+          "match": "Havelse v Viktoria Koln",
+          "market": "Viktoria Koln win",
+          "odds": "1.45",
+          "r": "pending"
+        },
+        {
+          "match": "Cardiff U21 v Plymouth U21",
+          "market": "Cardiff U21 win",
+          "odds": "1.41",
+          "r": "pending"
+        },
+        {
+          "match": "WBA U21 v Coventry U21",
+          "market": "Over 2.5",
+          "odds": "1.32",
+          "r": "pending"
+        },
+        {
+          "match": "Leeds U21 v Charlton U21",
+          "market": "Over 2.5",
+          "odds": "1.32",
+          "r": "pending"
+        },
+        {
+          "match": "Bayern v Cologne",
+          "market": "Bayern win & Over 3.5",
+          "odds": "1.39",
+          "r": "pending"
+        },
+        {
+          "match": "TNS v Trefelin",
+          "market": "TNS -2.5 handicap",
+          "odds": "1.22",
+          "r": "pending"
+        },
+        {
+          "match": "Troyes v Le Havre",
+          "market": "Double chance 1X",
+          "odds": "1.36",
+          "r": "pending"
+        },
+        {
+          "match": "Cercle Brugge v Westerlo",
+          "market": "BTTS Yes",
+          "odds": "1.44",
+          "r": "pending"
+        },
+        {
+          "match": "Athletic Bilbao v Espanyol",
+          "market": "Bilbao win",
+          "odds": "1.48",
           "r": "pending"
         }
       ]
