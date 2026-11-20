@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T12:45:32Z",
+  "updated": "2026-11-20T13:05:01Z",
   "slips": [
     {
       "code": "5AASQJY",
@@ -348,6 +348,138 @@
           "match": "Athletic Bilbao v Espanyol",
           "market": "Bilbao win",
           "odds": "1.48",
+          "r": "pending"
+        }
+      ]
+    },
+    {
+      "code": "Q8C7I3U",
+      "from": "GURFYDP",
+      "date": "2026-11-20",
+      "legs": 6,
+      "odds": 4.11,
+      "status": "pending",
+      "ait": 0,
+      "note": "Early slip from GURFYDP (DC 1UP / 1UP). Approved and posted 20 Nov.",
+      "legsList": [
+        {
+          "match": "Darmstadt v Heidenheim",
+          "market": "Heidenheim DC 1UP X2",
+          "odds": "1.23",
+          "r": "pending"
+        },
+        {
+          "match": "Union Berlin W v Leverkusen W",
+          "market": "Leverkusen W DC 1UP X2",
+          "odds": "1.23",
+          "r": "pending"
+        },
+        {
+          "match": "Nancy v Dijon",
+          "market": "Nancy 1UP",
+          "odds": "1.37",
+          "r": "pending"
+        },
+        {
+          "match": "Metz v Boulogne",
+          "market": "Metz DC 1UP 1X",
+          "odds": "1.25",
+          "r": "pending"
+        },
+        {
+          "match": "Red Star v Pau",
+          "market": "Red Star DC 1UP 1X",
+          "odds": "1.23",
+          "r": "pending"
+        },
+        {
+          "match": "Annecy v Clermont",
+          "market": "Annecy DC 1UP 1X",
+          "odds": "1.28",
+          "r": "pending"
+        }
+      ]
+    },
+    {
+      "code": "BM9HHTH",
+      "from": "GURFYDP",
+      "date": "2026-11-20",
+      "legs": 5,
+      "odds": 3.07,
+      "status": "pending",
+      "ait": 0,
+      "note": "Goals slip from GURFYDP. Approved and posted 20 Nov.",
+      "legsList": [
+        {
+          "match": "WBA U21 v Coventry U21",
+          "market": "Over 2.5",
+          "odds": "1.27",
+          "r": "pending"
+        },
+        {
+          "match": "Ipswich U21 v Porto B",
+          "market": "Porto B DC X2",
+          "odds": "1.11",
+          "r": "pending"
+        },
+        {
+          "match": "Leeds U21 v Charlton U21",
+          "market": "Over 2.5",
+          "odds": "1.27",
+          "r": "pending"
+        },
+        {
+          "match": "Verona v Cesena",
+          "market": "Verona 1UP",
+          "odds": "1.33",
+          "r": "pending"
+        },
+        {
+          "match": "Bayern v Cologne",
+          "market": "Bayern Over 2.5 goals",
+          "odds": "1.29",
+          "r": "pending"
+        }
+      ]
+    },
+    {
+      "code": "2CJBE1E",
+      "from": "GURFYDP",
+      "date": "2026-11-20",
+      "legs": 5,
+      "odds": 3.12,
+      "status": "pending",
+      "ait": 0,
+      "note": "Late slip from GURFYDP (DC / DC 1UP / 1UP). Approved and posted 20 Nov.",
+      "legsList": [
+        {
+          "match": "Andorra v Leganes",
+          "market": "Andorra DC 1X",
+          "odds": "1.25",
+          "r": "pending"
+        },
+        {
+          "match": "Troyes v Le Havre",
+          "market": "Troyes DC 1UP 1X",
+          "odds": "1.25",
+          "r": "pending"
+        },
+        {
+          "match": "Southend v Boreham Wood",
+          "market": "Boreham Wood DC 1UP X2",
+          "odds": "1.24",
+          "r": "pending"
+        },
+        {
+          "match": "Athletic Bilbao v Espanyol",
+          "market": "Bilbao 1UP",
+          "odds": "1.28",
+          "r": "pending"
+        },
+        {
+          "match": "Barnsley v Sheffield Wed",
+          "market": "Sheffield Wed DC 1UP X2",
+          "odds": "1.26",
           "r": "pending"
         }
       ]
