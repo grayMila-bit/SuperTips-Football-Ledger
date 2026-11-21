@@ -282,7 +282,7 @@
    "odds": 37.83,
    "status": "lost",
    "ait": -2,
-   "note": "Small stake, big win (Friday). Approved and posted 20 Nov. LOST 4/11: Shakhtar 1-1 Livyi Bereh, Bayern 1-1 Cologne, Cercle 1-0 Westerlo (BTTS), Bilbao 0-1 Espanyol.",
+   "note": "Small stake, big win (Friday). Approved and posted 20 Nov. LOST (4 legs failed): Shakhtar 1-1 Livyi Bereh, Bayern 1-1 Cologne, Cercle 1-0 Westerlo (BTTS), Bilbao 0-1 Espanyol.",
    "legsList": [
     {
      "match": "Shakhtar v Livyi Bereh",
@@ -425,7 +425,7 @@
    "odds": 3.07,
    "status": "lost",
    "ait": -2,
-   "note": "Goals slip from GURFYDP. Approved and posted 20 Nov. LOST 2/5: Ipswich U21 2-1 Porto B (X2), Verona 0-2 Cesena (1UP), Bayern 1-1 Cologne (Bayern O2.5).",
+   "note": "Goals slip from GURFYDP. Approved and posted 20 Nov. LOST (3 legs failed): Ipswich U21 2-1 Porto B (X2), Verona 0-2 Cesena (1UP), Bayern 1-1 Cologne (Bayern O2.5).",
    "legsList": [
     {
      "match": "WBA U21 v Coventry U21",
@@ -472,7 +472,7 @@
    "odds": 3.12,
    "status": "lost",
    "ait": -2,
-   "note": "Late slip from GURFYDP. Approved and posted 20 Nov. LOST 3/5: Andorra 1-3 Leganes (1X), Bilbao 0-1 Espanyol (1UP).",
+   "note": "Late slip from GURFYDP. Approved and posted 20 Nov. LOST (2 legs failed): Andorra 1-3 Leganes (1X), Bilbao 0-1 Espanyol (1UP).",
    "legsList": [
     {
      "match": "Andorra v Leganes",
