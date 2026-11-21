@@ -1,826 +1,853 @@
 {
-  "updated": "2026-11-20T13:05:01Z",
-  "slips": [
+ "updated": "2026-11-21T16:45:00+03:00",
+ "slips": [
+  {
+   "code": "5AASQJY",
+   "from": "D5Z8SCV",
+   "date": "2026-11-18",
+   "legs": 5,
+   "odds": 2.76,
+   "status": "won",
+   "ait": 10,
+   "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify.",
+   "settled_at": "2026-11-18T21:55:00Z",
+   "legsList": [
     {
-      "code": "5AASQJY",
-      "from": "D5Z8SCV",
-      "date": "2026-11-18",
-      "legs": 5,
-      "odds": 2.76,
-      "status": "won",
-      "ait": 10,
-      "note": "Trial slip, posted to channel. Legs: Real Madrid W win; Sabadell to qualify; Forest U21 v Newcastle U21 12; Mallorca 1UP; Tenerife to qualify.",
-      "settled_at": "2026-11-18T21:55:00Z",
-      "legsList": [
-        {
-          "match": "Real Madrid W v Inter W",
-          "market": "Real Madrid W win",
-          "odds": "1.18",
-          "r": "won",
-          "score": "3-1"
-        },
-        {
-          "match": "Utebo v Sabadell",
-          "market": "Sabadell to qualify",
-          "odds": "1.23",
-          "r": "won",
-          "score": "0-3"
-        },
-        {
-          "match": "Alcoyano v Mallorca",
-          "market": "Mallorca 1UP",
-          "odds": "1.25",
-          "r": "won",
-          "score": "0-1"
-        },
-        {
-          "match": "Badajoz v Tenerife",
-          "market": "Tenerife to qualify",
-          "odds": "1.25",
-          "r": "won",
-          "score": "2-5"
-        },
-        {
-          "match": "Forest U21 v Newcastle U21",
-          "market": "Double chance 12",
-          "odds": "1.22",
-          "r": "won",
-          "score": "2-3"
-        }
-      ]
+     "match": "Real Madrid W v Inter W",
+     "market": "Real Madrid W win",
+     "odds": "1.18",
+     "r": "won",
+     "score": "3-1"
     },
     {
-      "code": "Y69YJPY",
-      "from": "FBVF9Y7",
-      "date": "2026-11-19",
-      "legs": 7,
-      "odds": 3.43,
-      "status": "lost",
-      "ait": -2,
-      "note": "Safest markets: 5 won, 2 lost (Gremio 0-0 Bahia Over 1.5; Lions 1-1 Wollongong DC 12). Remo, Flamengo, Cruzeiro, Corinthians, Preston won.",
-      "settled_at": "2026-11-19T10:30:00Z",
-      "legsList": [
-        {
-          "match": "Remo v Chapecoense",
-          "market": "Double chance 12",
-          "odds": "1.21",
-          "r": "won",
-          "score": "2-0"
-        },
-        {
-          "match": "Flamengo v Paranaense",
-          "market": "Flamengo over 1.5",
-          "odds": "1.22",
-          "r": "won",
-          "score": "2-1"
-        },
-        {
-          "match": "Cruzeiro v Palmeiras",
-          "market": "Over 1.5",
-          "odds": "1.18",
-          "r": "won",
-          "score": "2-1"
-        },
-        {
-          "match": "Gremio v Bahia",
-          "market": "Over 1.5",
-          "odds": "1.18",
-          "r": "lost",
-          "score": "0-0"
-        },
-        {
-          "match": "Corinthians v Botafogo",
-          "market": "Double chance 1X",
-          "odds": "1.22",
-          "r": "won",
-          "score": "4-0"
-        },
-        {
-          "match": "Lions v Wollongong Wolves",
-          "market": "Double chance 12",
-          "odds": "1.20",
-          "r": "lost",
-          "score": "1-1"
-        },
-        {
-          "match": "Preston Lions v South Hobart",
-          "market": "Preston win",
-          "odds": "1.14",
-          "r": "won",
-          "score": "6-0"
-        }
-      ]
+     "match": "Utebo v Sabadell",
+     "market": "Sabadell to qualify",
+     "odds": "1.23",
+     "r": "won",
+     "score": "0-3"
     },
     {
-      "code": "287P1TW",
-      "from": "new",
-      "date": "2026-11-17",
-      "legs": 8,
-      "odds": 4.94,
-      "status": "won",
-      "ait": 10,
-      "note": "Nations League O/U + BTTS slip, all 8 legs won (Denmark 2-3 Norway, Wales 2-3 Portugal)."
+     "match": "Alcoyano v Mallorca",
+     "market": "Mallorca 1UP",
+     "odds": "1.25",
+     "r": "won",
+     "score": "0-1"
     },
     {
-      "code": "Bet 13896497278",
-      "from": "Amirine",
-      "date": "2026-11-17",
-      "legs": 8,
-      "odds": 3.43,
-      "status": "won",
-      "ait": 10,
-      "note": "Nations League O/U + DC 1UP slip, all 8 legs won."
+     "match": "Badajoz v Tenerife",
+     "market": "Tenerife to qualify",
+     "odds": "1.25",
+     "r": "won",
+     "score": "2-5"
     },
     {
-      "code": "Bet 13896443206",
-      "from": "Amirine",
-      "date": "2026-11-17",
-      "legs": 9,
-      "odds": 16.38,
-      "status": "lost",
-      "ait": -2,
-      "note": "Internationals/U21 1X2 slip: 5 won, 4 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2)."
-    },
-    {
-      "code": "Bet 13896521373",
-      "from": "Amirine",
-      "date": "2026-11-17",
-      "legs": 7,
-      "odds": 18.89,
-      "status": "lost",
-      "ait": -2,
-      "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
-    },
-    {
-      "code": "IAOZYVO",
-      "from": "AAO8LDU",
-      "date": "2026-11-19",
-      "legs": 7,
-      "odds": 3.05,
-      "status": "won",
-      "ait": 10,
-      "note": "Won: all 7 legs. Al Ain v Al Dhafra O2.5 (2-1); Al Ahli Doha v Al-Shamal O1.5 (1-1); Austria Wien W v Bayern W O2.5 (0-4); Paris FC W v Koge W O1.5 (2-1); Celta W v Espanyol W Espanyol 1UP (2-1, Espanyol led first); Arsenal W v Lyon W O1.5 (0-2); Benfica W v Roma W O1.5 (2-3)",
-      "legsList": [
-        {
-          "market": "Over 2.5",
-          "match": "Al Ain v Al Dhafra",
-          "odds": "1.24",
-          "r": "won",
-          "score": "2-1"
-        },
-        {
-          "market": "Over 1.5",
-          "match": "Al Ahli Doha v Al-Shamal",
-          "odds": "1.11",
-          "r": "won",
-          "score": "1-1"
-        },
-        {
-          "market": "Over 2.5",
-          "match": "Austria Wien W v Bayern W",
-          "odds": "1.25",
-          "r": "won",
-          "score": "0-4"
-        },
-        {
-          "market": "Over 1.5",
-          "match": "Paris FC W v Koge W",
-          "odds": "1.14",
-          "r": "won",
-          "score": "2-1"
-        },
-        {
-          "market": "Espanyol 1UP",
-          "match": "Celta W v Espanyol W",
-          "odds": "1.21",
-          "r": "won",
-          "score": "2-1"
-        },
-        {
-          "market": "Over 1.5",
-          "match": "Arsenal W v Lyon W",
-          "odds": "1.13",
-          "r": "won",
-          "score": "0-2"
-        },
-        {
-          "market": "Over 1.5",
-          "match": "Benfica W v Roma W",
-          "odds": "1.14",
-          "r": "won",
-          "score": "2-3"
-        }
-      ],
-      "settled_at": "2026-11-19T22:55:00Z"
-    },
-    {
-      "code": "NC7H8I0",
-      "from": "1VIXA4E",
-      "date": "2026-11-19",
-      "legs": 7,
-      "odds": 3.32,
-      "status": "lost",
-      "ait": -2,
-      "note": "Lost: Boston River v Maldonado 1-0 (X2 ✗). Legs: Al Ain v Al Dhafra O2.5; Al Okhdood U21 v Al Jabalain U21 O1.5; MB Rouissat v CR Belouizdad Rouissat U1.5; MC Alger v Olympique Akbou U3.5; Boston River v Maldonado X2; Penarol v Cerro Largo 1X; Progreso v MC Torque X2",
-      "legsList": [
-        {
-          "market": "Over 2.5",
-          "match": "Al Ain v Al Dhafra",
-          "odds": "1.26",
-          "r": "won",
-          "score": "2-1"
-        },
-        {
-          "market": "Over 1.5",
-          "match": "Al Okhdood U21 v Al Jabalain U21",
-          "odds": "1.21",
-          "r": "pending"
-        },
-        {
-          "market": "Rouissat under 1.5",
-          "match": "MB Rouissat v CR Belouizdad",
-          "odds": "1.15",
-          "r": "won",
-          "score": "1-0"
-        },
-        {
-          "market": "Under 3.5",
-          "match": "MC Alger v Olympique Akbou",
-          "odds": "1.17",
-          "r": "won",
-          "score": "0-1"
-        },
-        {
-          "market": "Double chance X2",
-          "match": "Boston River v Maldonado",
-          "odds": "1.28",
-          "r": "lost",
-          "score": "1-0"
-        },
-        {
-          "market": "Double chance 1X",
-          "match": "Penarol v Cerro Largo",
-          "odds": "1.10",
-          "r": "won",
-          "score": "3-0"
-        },
-        {
-          "market": "Double chance X2",
-          "match": "Progreso v MC Torque",
-          "odds": "1.15",
-          "r": "won",
-          "score": "1-1"
-        }
-      ],
-      "settled_at": "2026-11-19T21:58:00Z"
-    },
-    {
-      "code": "U33POBA",
-      "from": "new",
-      "date": "2026-11-20",
-      "legs": 11,
-      "odds": 37.83,
-      "status": "pending",
-      "ait": 0,
-      "note": "Small stake, big win (Friday). Approved and posted to channel 20 Nov.",
-      "legsList": [
-        {
-          "match": "Shakhtar v Livyi Bereh",
-          "market": "Shakhtar win & Over 1.5",
-          "odds": "1.46",
-          "r": "pending"
-        },
-        {
-          "match": "Darmstadt v Heidenheim",
-          "market": "Heidenheim 1UP",
-          "odds": "1.48",
-          "r": "pending"
-        },
-        {
-          "match": "Havelse v Viktoria Koln",
-          "market": "Viktoria Koln win",
-          "odds": "1.45",
-          "r": "pending"
-        },
-        {
-          "match": "Cardiff U21 v Plymouth U21",
-          "market": "Cardiff U21 win",
-          "odds": "1.41",
-          "r": "pending"
-        },
-        {
-          "match": "WBA U21 v Coventry U21",
-          "market": "Over 2.5",
-          "odds": "1.32",
-          "r": "pending"
-        },
-        {
-          "match": "Leeds U21 v Charlton U21",
-          "market": "Over 2.5",
-          "odds": "1.32",
-          "r": "pending"
-        },
-        {
-          "match": "Bayern v Cologne",
-          "market": "Bayern win & Over 3.5",
-          "odds": "1.39",
-          "r": "pending"
-        },
-        {
-          "match": "TNS v Trefelin",
-          "market": "TNS -2.5 handicap",
-          "odds": "1.22",
-          "r": "pending"
-        },
-        {
-          "match": "Troyes v Le Havre",
-          "market": "Double chance 1X",
-          "odds": "1.36",
-          "r": "pending"
-        },
-        {
-          "match": "Cercle Brugge v Westerlo",
-          "market": "BTTS Yes",
-          "odds": "1.44",
-          "r": "pending"
-        },
-        {
-          "match": "Athletic Bilbao v Espanyol",
-          "market": "Bilbao win",
-          "odds": "1.48",
-          "r": "pending"
-        }
-      ]
-    },
-    {
-      "code": "Q8C7I3U",
-      "from": "GURFYDP",
-      "date": "2026-11-20",
-      "legs": 6,
-      "odds": 4.11,
-      "status": "pending",
-      "ait": 0,
-      "note": "Early slip from GURFYDP (DC 1UP / 1UP). Approved and posted 20 Nov.",
-      "legsList": [
-        {
-          "match": "Darmstadt v Heidenheim",
-          "market": "Heidenheim DC 1UP X2",
-          "odds": "1.23",
-          "r": "pending"
-        },
-        {
-          "match": "Union Berlin W v Leverkusen W",
-          "market": "Leverkusen W DC 1UP X2",
-          "odds": "1.23",
-          "r": "pending"
-        },
-        {
-          "match": "Nancy v Dijon",
-          "market": "Nancy 1UP",
-          "odds": "1.37",
-          "r": "pending"
-        },
-        {
-          "match": "Metz v Boulogne",
-          "market": "Metz DC 1UP 1X",
-          "odds": "1.25",
-          "r": "pending"
-        },
-        {
-          "match": "Red Star v Pau",
-          "market": "Red Star DC 1UP 1X",
-          "odds": "1.23",
-          "r": "pending"
-        },
-        {
-          "match": "Annecy v Clermont",
-          "market": "Annecy DC 1UP 1X",
-          "odds": "1.28",
-          "r": "pending"
-        }
-      ]
-    },
-    {
-      "code": "BM9HHTH",
-      "from": "GURFYDP",
-      "date": "2026-11-20",
-      "legs": 5,
-      "odds": 3.07,
-      "status": "pending",
-      "ait": 0,
-      "note": "Goals slip from GURFYDP. Approved and posted 20 Nov.",
-      "legsList": [
-        {
-          "match": "WBA U21 v Coventry U21",
-          "market": "Over 2.5",
-          "odds": "1.27",
-          "r": "pending"
-        },
-        {
-          "match": "Ipswich U21 v Porto B",
-          "market": "Porto B DC X2",
-          "odds": "1.11",
-          "r": "pending"
-        },
-        {
-          "match": "Leeds U21 v Charlton U21",
-          "market": "Over 2.5",
-          "odds": "1.27",
-          "r": "pending"
-        },
-        {
-          "match": "Verona v Cesena",
-          "market": "Verona 1UP",
-          "odds": "1.33",
-          "r": "pending"
-        },
-        {
-          "match": "Bayern v Cologne",
-          "market": "Bayern Over 2.5 goals",
-          "odds": "1.29",
-          "r": "pending"
-        }
-      ]
-    },
-    {
-      "code": "2CJBE1E",
-      "from": "GURFYDP",
-      "date": "2026-11-20",
-      "legs": 5,
-      "odds": 3.12,
-      "status": "pending",
-      "ait": 0,
-      "note": "Late slip from GURFYDP (DC / DC 1UP / 1UP). Approved and posted 20 Nov.",
-      "legsList": [
-        {
-          "match": "Andorra v Leganes",
-          "market": "Andorra DC 1X",
-          "odds": "1.25",
-          "r": "pending"
-        },
-        {
-          "match": "Troyes v Le Havre",
-          "market": "Troyes DC 1UP 1X",
-          "odds": "1.25",
-          "r": "pending"
-        },
-        {
-          "match": "Southend v Boreham Wood",
-          "market": "Boreham Wood DC 1UP X2",
-          "odds": "1.24",
-          "r": "pending"
-        },
-        {
-          "match": "Athletic Bilbao v Espanyol",
-          "market": "Bilbao 1UP",
-          "odds": "1.28",
-          "r": "pending"
-        },
-        {
-          "match": "Barnsley v Sheffield Wed",
-          "market": "Sheffield Wed DC 1UP X2",
-          "odds": "1.26",
-          "r": "pending"
-        }
-      ]
+     "match": "Forest U21 v Newcastle U21",
+     "market": "Double chance 12",
+     "odds": "1.22",
+     "r": "won",
+     "score": "2-3"
     }
-  ],
-  "favorites": [
+   ]
+  },
+  {
+   "code": "Y69YJPY",
+   "from": "FBVF9Y7",
+   "date": "2026-11-19",
+   "legs": 7,
+   "odds": 3.43,
+   "status": "lost",
+   "ait": -2,
+   "note": "Safest markets: 5 won, 2 lost (Gremio 0-0 Bahia Over 1.5; Lions 1-1 Wollongong DC 12). Remo, Flamengo, Cruzeiro, Corinthians, Preston won.",
+   "settled_at": "2026-11-19T10:30:00Z",
+   "legsList": [
     {
-      "kind": "market",
-      "order": 1,
-      "name": "Over 1.5 / Over 2.5",
-      "market": "",
-      "record": "13 won, 1 lost",
-      "verdict": "Main market",
-      "vclass": "good",
-      "evidence": "Only loss: Grêmio 0-0 Bahia (Over 1.5, 19 Nov). Won in Women's Champions League, Gulf leagues, Brazil and Nations League.",
-      "since": "2026-11-17",
-      "id": "market-over-1-5-over-2-5"
+     "match": "Remo v Chapecoense",
+     "market": "Double chance 12",
+     "odds": "1.21",
+     "r": "won",
+     "score": "2-0"
     },
     {
-      "kind": "market",
-      "order": 2,
-      "name": "1UP, DC 1UP, To qualify",
-      "market": "",
-      "record": "7 of 7 won",
-      "verdict": "Main market",
-      "vclass": "good",
-      "evidence": "Mallorca 1UP, Espanyol W 1UP, Copa del Rey qualifiers (Sabadell, Tenerife), Nations League DC 1UP.",
-      "since": "2026-11-17",
-      "id": "market-1up-dc-1up-to-qualify"
+     "match": "Flamengo v Paranaense",
+     "market": "Flamengo over 1.5",
+     "odds": "1.22",
+     "r": "won",
+     "score": "2-1"
     },
     {
-      "kind": "market",
-      "order": 3,
-      "name": "BTTS",
-      "market": "",
-      "record": "All won",
-      "verdict": "Use more",
-      "vclass": "good",
-      "evidence": "Nations League: Denmark 2-3 Norway, Wales 2-3 Portugal.",
-      "since": "2026-11-17",
-      "id": "market-btts"
+     "match": "Cruzeiro v Palmeiras",
+     "market": "Over 1.5",
+     "odds": "1.18",
+     "r": "won",
+     "score": "2-1"
     },
     {
-      "kind": "market",
-      "order": 4,
-      "name": "Unders in low-scoring leagues",
-      "market": "",
-      "record": "2 of 2 won",
-      "verdict": "Use selectively",
-      "vclass": "good",
-      "evidence": "Algeria: Rouissat v Belouizdad 1-0 (Under 1.5), MC Alger v Akbou 0-1 (Under 3.5).",
-      "since": "2026-11-17",
-      "id": "market-unders-in-low-scoring-leagues"
+     "match": "Gremio v Bahia",
+     "market": "Over 1.5",
+     "odds": "1.18",
+     "r": "lost",
+     "score": "0-0"
     },
     {
-      "kind": "market",
-      "order": 5,
-      "name": "Double chance 1X / X2",
-      "market": "",
-      "record": "3 won, 1 lost",
-      "verdict": "Home sides only",
-      "vclass": "watch",
-      "evidence": "Won: Corinthians 4-0, Peñarol 3-0, Progreso 1-1. Lost: Boston River 1-0 Maldonado (X2 away).",
-      "since": "2026-11-17",
-      "id": "market-double-chance-1x-x2"
+     "match": "Corinthians v Botafogo",
+     "market": "Double chance 1X",
+     "odds": "1.22",
+     "r": "won",
+     "score": "4-0"
     },
     {
-      "kind": "market",
-      "order": 6,
-      "name": "Double chance 12",
-      "market": "",
-      "record": "2 won, 1 lost",
-      "verdict": "Risky in tight games",
-      "vclass": "watch",
-      "evidence": "Won: Remo 2-0, Forest U21 v Newcastle U21 2-3. Lost: Lions 1-1 Wollongong.",
-      "since": "2026-11-17",
-      "id": "market-double-chance-12"
+     "match": "Lions v Wollongong Wolves",
+     "market": "Double chance 12",
+     "odds": "1.20",
+     "r": "lost",
+     "score": "1-1"
     },
     {
-      "kind": "market",
-      "order": 7,
-      "name": "Straight win in internationals/U21",
-      "market": "",
-      "record": "4 lost",
-      "verdict": "Avoid",
-      "vclass": "bad",
-      "evidence": "Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2 (17 Nov).",
-      "since": "2026-11-17",
-      "id": "market-straight-win-in-internationals-u21"
-    },
-    {
-      "kind": "league",
-      "order": 1,
-      "name": "Women's Champions League",
-      "market": "Over 1.5 / 2.5, favourite to win",
-      "record": "5 of 5 won",
-      "verdict": "Strong",
-      "vclass": "good",
-      "evidence": "Bayern W 4-0 away, Real Madrid W 3-1, Arsenal W v Lyon W 0-2, Benfica W v Roma W 2-3, Paris FC W v Koge W 2-1.",
-      "since": "2026-11-17",
-      "id": "league-women-s-champions-league"
-    },
-    {
-      "kind": "league",
-      "order": 2,
-      "name": "UEFA Nations League",
-      "market": "Over/under, BTTS, DC 1UP",
-      "record": "16 of 16 won",
-      "verdict": "Strong",
-      "vclass": "good",
-      "evidence": "Two 8-leg slips on 17 Nov won in full (287P1TW and Bet 13896497278).",
-      "since": "2026-11-17",
-      "id": "league-uefa-nations-league"
-    },
-    {
-      "kind": "league",
-      "order": 3,
-      "name": "Copa del Rey",
-      "market": "To qualify, 1UP",
-      "record": "3 of 3 won",
-      "verdict": "Strong",
-      "vclass": "good",
-      "evidence": "Sabadell won 0-3 at Utebo, Mallorca 1UP at Alcoyano (0-1), Tenerife won 2-5 at Badajoz.",
-      "since": "2026-11-17",
-      "id": "league-copa-del-rey"
-    },
-    {
-      "kind": "league",
-      "order": 4,
-      "name": "UAE Pro League / Qatar Stars League",
-      "market": "Over 1.5 / 2.5",
-      "record": "3 of 3 won",
-      "verdict": "Strong",
-      "vclass": "good",
-      "evidence": "Al Ain 2-1 Al Dhafra (on two slips), Al Ahli Doha 1-1 Al-Shamal.",
-      "since": "2026-11-17",
-      "id": "league-uae-pro-league-qatar-stars-league"
-    },
-    {
-      "kind": "league",
-      "order": 5,
-      "name": "Algeria Ligue 1",
-      "market": "Unders",
-      "record": "2 of 2 won",
-      "verdict": "Use selectively",
-      "vclass": "good",
-      "evidence": "Rouissat v Belouizdad 1-0, MC Alger v Akbou 0-1.",
-      "since": "2026-11-17",
-      "id": "league-algeria-ligue-1"
-    },
-    {
-      "kind": "league",
-      "order": 6,
-      "name": "Brazil Série A",
-      "market": "Over 1.5, home double chance",
-      "record": "4 won, 1 lost",
-      "verdict": "Good, watch 0-0 risk",
-      "vclass": "watch",
-      "evidence": "Won: Flamengo 2-1, Cruzeiro 2-1, Corinthians 4-0, Remo 2-0. Lost: Grêmio 0-0 Bahia.",
-      "since": "2026-11-17",
-      "id": "league-brazil-serie-a"
-    },
-    {
-      "kind": "league",
-      "order": 7,
-      "name": "Uruguay Primera",
-      "market": "Double chance",
-      "record": "2 won, 1 lost",
-      "verdict": "Watch",
-      "vclass": "watch",
-      "evidence": "Won: Peñarol 3-0, Progreso 1-1. Lost: Boston River 1-0 Maldonado.",
-      "since": "2026-11-17",
-      "id": "league-uruguay-primera"
-    },
-    {
-      "kind": "league",
-      "order": 8,
-      "name": "Internationals & U21 friendlies",
-      "market": "Not straight wins",
-      "record": "4 lost",
-      "verdict": "Avoid straight wins",
-      "vclass": "bad",
-      "evidence": "Three 1-1 draws on 17 Nov sank two slips; goal markets in the same games won.",
-      "since": "2026-11-17",
-      "id": "league-internationals-u21-friendlies"
-    },
-    {
-      "kind": "team",
-      "order": 1,
-      "name": "Al Ain",
-      "market": "Over 2.5",
-      "record": "2 of 2 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Al Ain 2-1 Al Dhafra, UAE Pro League, 19 Nov.",
-      "since": "2026-11-17",
-      "id": "team-al-ain"
-    },
-    {
-      "kind": "team",
-      "order": 2,
-      "name": "Bayern W",
-      "market": "Win / Over 2.5",
-      "record": "1 of 1 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Won 4-0 away at Austria Wien W, Women's Champions League.",
-      "since": "2026-11-17",
-      "id": "team-bayern-w"
-    },
-    {
-      "kind": "team",
-      "order": 3,
-      "name": "Real Madrid W",
-      "market": "Win",
-      "record": "1 of 1 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Beat Inter W 3-1, Women's Champions League.",
-      "since": "2026-11-17",
-      "id": "team-real-madrid-w"
-    },
-    {
-      "kind": "team",
-      "order": 4,
-      "name": "Flamengo",
-      "market": "Over 1.5",
-      "record": "1 of 1 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Flamengo 2-1 Paranaense, Brazil Série A.",
-      "since": "2026-11-17",
-      "id": "team-flamengo"
-    },
-    {
-      "kind": "team",
-      "order": 5,
-      "name": "Corinthians",
-      "market": "Home 1X",
-      "record": "1 of 1 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Corinthians 4-0 Botafogo, Brazil Série A.",
-      "since": "2026-11-17",
-      "id": "team-corinthians"
-    },
-    {
-      "kind": "team",
-      "order": 6,
-      "name": "Peñarol",
-      "market": "Home 1X",
-      "record": "1 of 1 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Peñarol 3-0 Cerro Largo, Uruguay Primera.",
-      "since": "2026-11-17",
-      "id": "team-penarol"
-    },
-    {
-      "kind": "team",
-      "order": 7,
-      "name": "Arsenal W v Lyon W",
-      "market": "Over 1.5",
-      "record": "1 of 1 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Finished 0-2, Women's Champions League.",
-      "since": "2026-11-17",
-      "id": "team-arsenal-w-v-lyon-w"
-    },
-    {
-      "kind": "team",
-      "order": 8,
-      "name": "Benfica W v Roma W",
-      "market": "Over 1.5",
-      "record": "1 of 1 won",
-      "verdict": "Watch (small sample)",
-      "vclass": "watch",
-      "evidence": "Finished 2-3, Women's Champions League.",
-      "since": "2026-11-17",
-      "id": "team-benfica-w-v-roma-w"
-    },
-    {
-      "kind": "try",
-      "order": 1,
-      "name": "Premier League, Serie A",
-      "market": "Over 1.5, DC 1UP",
-      "record": "Not tested yet",
-      "verdict": "To test",
-      "vclass": "test",
-      "evidence": "Top leagues with plenty of data.",
-      "since": "2026-11-17",
-      "id": "try-premier-league-serie-a"
-    },
-    {
-      "kind": "try",
-      "order": 2,
-      "name": "Eredivisie, Bundesliga",
-      "market": "Over 2.5, BTTS",
-      "record": "Not tested yet",
-      "verdict": "To test",
-      "vclass": "test",
-      "evidence": "Among the highest-scoring leagues.",
-      "since": "2026-11-17",
-      "id": "try-eredivisie-bundesliga"
-    },
-    {
-      "kind": "try",
-      "order": 3,
-      "name": "Portugal Liga, Turkish Süper Lig",
-      "market": "Big-three teams 1UP",
-      "record": "Not tested yet",
-      "verdict": "To test",
-      "vclass": "test",
-      "evidence": "Clear favourites most weeks.",
-      "since": "2026-11-17",
-      "id": "try-portugal-liga-turkish-super-lig"
-    },
-    {
-      "kind": "try",
-      "order": 4,
-      "name": "Premier League Cup (U21)",
-      "market": "Over 2.5",
-      "record": "Testing in BM9HHTH (20 Nov)",
-      "verdict": "To test",
-      "vclass": "test",
-      "evidence": "U21 games are usually high-scoring.",
-      "since": "2026-11-17",
-      "id": "try-premier-league-cup-u21"
-    },
-    {
-      "kind": "try",
-      "order": 5,
-      "name": "Any league",
-      "market": "Corners, cards, team Over 0.5",
-      "record": "Not tested yet",
-      "verdict": "To test",
-      "vclass": "test",
-      "evidence": "Markets we haven't used at all yet.",
-      "since": "2026-11-17",
-      "id": "try-any-league"
+     "match": "Preston Lions v South Hobart",
+     "market": "Preston win",
+     "odds": "1.14",
+     "r": "won",
+     "score": "6-0"
     }
-  ]
+   ]
+  },
+  {
+   "code": "287P1TW",
+   "from": "new",
+   "date": "2026-11-17",
+   "legs": 8,
+   "odds": 4.94,
+   "status": "won",
+   "ait": 10,
+   "note": "Nations League O/U + BTTS slip, all 8 legs won (Denmark 2-3 Norway, Wales 2-3 Portugal)."
+  },
+  {
+   "code": "Bet 13896497278",
+   "from": "Amirine",
+   "date": "2026-11-17",
+   "legs": 8,
+   "odds": 3.43,
+   "status": "won",
+   "ait": 10,
+   "note": "Nations League O/U + DC 1UP slip, all 8 legs won."
+  },
+  {
+   "code": "Bet 13896443206",
+   "from": "Amirine",
+   "date": "2026-11-17",
+   "legs": 9,
+   "odds": 16.38,
+   "status": "lost",
+   "ait": -2,
+   "note": "Internationals/U21 1X2 slip: 5 won, 4 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2)."
+  },
+  {
+   "code": "Bet 13896521373",
+   "from": "Amirine",
+   "date": "2026-11-17",
+   "legs": 7,
+   "odds": 18.89,
+   "status": "lost",
+   "ait": -2,
+   "note": "Internationals/U21 1X2 slip: 4 won, 3 lost (Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran)."
+  },
+  {
+   "code": "IAOZYVO",
+   "from": "AAO8LDU",
+   "date": "2026-11-19",
+   "legs": 7,
+   "odds": 3.05,
+   "status": "won",
+   "ait": 10,
+   "note": "Won: all 7 legs. Al Ain v Al Dhafra O2.5 (2-1); Al Ahli Doha v Al-Shamal O1.5 (1-1); Austria Wien W v Bayern W O2.5 (0-4); Paris FC W v Koge W O1.5 (2-1); Celta W v Espanyol W Espanyol 1UP (2-1, Espanyol led first); Arsenal W v Lyon W O1.5 (0-2); Benfica W v Roma W O1.5 (2-3)",
+   "legsList": [
+    {
+     "market": "Over 2.5",
+     "match": "Al Ain v Al Dhafra",
+     "odds": "1.24",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "market": "Over 1.5",
+     "match": "Al Ahli Doha v Al-Shamal",
+     "odds": "1.11",
+     "r": "won",
+     "score": "1-1"
+    },
+    {
+     "market": "Over 2.5",
+     "match": "Austria Wien W v Bayern W",
+     "odds": "1.25",
+     "r": "won",
+     "score": "0-4"
+    },
+    {
+     "market": "Over 1.5",
+     "match": "Paris FC W v Koge W",
+     "odds": "1.14",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "market": "Espanyol 1UP",
+     "match": "Celta W v Espanyol W",
+     "odds": "1.21",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "market": "Over 1.5",
+     "match": "Arsenal W v Lyon W",
+     "odds": "1.13",
+     "r": "won",
+     "score": "0-2"
+    },
+    {
+     "market": "Over 1.5",
+     "match": "Benfica W v Roma W",
+     "odds": "1.14",
+     "r": "won",
+     "score": "2-3"
+    }
+   ],
+   "settled_at": "2026-11-19T22:55:00Z"
+  },
+  {
+   "code": "NC7H8I0",
+   "from": "1VIXA4E",
+   "date": "2026-11-19",
+   "legs": 7,
+   "odds": 3.32,
+   "status": "lost",
+   "ait": -2,
+   "note": "Lost: Boston River v Maldonado 1-0 (X2 ✗). Legs: Al Ain v Al Dhafra O2.5; Al Okhdood U21 v Al Jabalain U21 O1.5; MB Rouissat v CR Belouizdad Rouissat U1.5; MC Alger v Olympique Akbou U3.5; Boston River v Maldonado X2; Penarol v Cerro Largo 1X; Progreso v MC Torque X2",
+   "legsList": [
+    {
+     "market": "Over 2.5",
+     "match": "Al Ain v Al Dhafra",
+     "odds": "1.26",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "market": "Over 1.5",
+     "match": "Al Okhdood U21 v Al Jabalain U21",
+     "odds": "1.21",
+     "r": "pending"
+    },
+    {
+     "market": "Rouissat under 1.5",
+     "match": "MB Rouissat v CR Belouizdad",
+     "odds": "1.15",
+     "r": "won",
+     "score": "1-0"
+    },
+    {
+     "market": "Under 3.5",
+     "match": "MC Alger v Olympique Akbou",
+     "odds": "1.17",
+     "r": "won",
+     "score": "0-1"
+    },
+    {
+     "market": "Double chance X2",
+     "match": "Boston River v Maldonado",
+     "odds": "1.28",
+     "r": "lost",
+     "score": "1-0"
+    },
+    {
+     "market": "Double chance 1X",
+     "match": "Penarol v Cerro Largo",
+     "odds": "1.10",
+     "r": "won",
+     "score": "3-0"
+    },
+    {
+     "market": "Double chance X2",
+     "match": "Progreso v MC Torque",
+     "odds": "1.15",
+     "r": "won",
+     "score": "1-1"
+    }
+   ],
+   "settled_at": "2026-11-19T21:58:00Z"
+  },
+  {
+   "code": "U33POBA",
+   "from": "new",
+   "date": "2026-11-20",
+   "legs": 11,
+   "odds": 37.83,
+   "status": "lost",
+   "ait": -2,
+   "note": "Small stake, big win (Friday). Approved and posted 20 Nov. LOST 4/11: Shakhtar 1-1 Livyi Bereh, Bayern 1-1 Cologne, Cercle 1-0 Westerlo (BTTS), Bilbao 0-1 Espanyol.",
+   "legsList": [
+    {
+     "match": "Shakhtar v Livyi Bereh",
+     "market": "Shakhtar win & Over 1.5",
+     "odds": "1.46",
+     "r": "lost",
+     "score": "1-1"
+    },
+    {
+     "match": "Darmstadt v Heidenheim",
+     "market": "Heidenheim 1UP",
+     "odds": "1.48",
+     "r": "won",
+     "score": "3-1"
+    },
+    {
+     "match": "Havelse v Viktoria Koln",
+     "market": "Viktoria Koln win",
+     "odds": "1.45",
+     "r": "won",
+     "score": "1-6"
+    },
+    {
+     "match": "Cardiff U21 v Plymouth U21",
+     "market": "Cardiff U21 win",
+     "odds": "1.41",
+     "r": "won",
+     "score": "3-1"
+    },
+    {
+     "match": "WBA U21 v Coventry U21",
+     "market": "Over 2.5",
+     "odds": "1.32",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "match": "Leeds U21 v Charlton U21",
+     "market": "Over 2.5",
+     "odds": "1.32",
+     "r": "won",
+     "score": "1-2"
+    },
+    {
+     "match": "Bayern v Cologne",
+     "market": "Bayern win & Over 3.5",
+     "odds": "1.39",
+     "r": "lost",
+     "score": "1-1"
+    },
+    {
+     "match": "TNS v Trefelin",
+     "market": "TNS -2.5 handicap",
+     "odds": "1.22",
+     "r": "won",
+     "score": "3-0"
+    },
+    {
+     "match": "Troyes v Le Havre",
+     "market": "Double chance 1X",
+     "odds": "1.36",
+     "r": "won",
+     "score": "3-1"
+    },
+    {
+     "match": "Cercle Brugge v Westerlo",
+     "market": "BTTS Yes",
+     "odds": "1.44",
+     "r": "lost",
+     "score": "1-0"
+    },
+    {
+     "match": "Athletic Bilbao v Espanyol",
+     "market": "Bilbao win",
+     "odds": "1.48",
+     "r": "lost",
+     "score": "0-1"
+    }
+   ]
+  },
+  {
+   "code": "Q8C7I3U",
+   "from": "GURFYDP",
+   "date": "2026-11-20",
+   "legs": 6,
+   "odds": 4.11,
+   "status": "won",
+   "ait": 10,
+   "note": "Early slip from GURFYDP (DC 1UP / 1UP). Approved and posted 20 Nov. WON: all 6 legs.",
+   "legsList": [
+    {
+     "match": "Darmstadt v Heidenheim",
+     "market": "Heidenheim DC 1UP X2",
+     "odds": "1.23",
+     "r": "won",
+     "score": "3-1"
+    },
+    {
+     "match": "Union Berlin W v Leverkusen W",
+     "market": "Leverkusen W DC 1UP X2",
+     "odds": "1.23",
+     "r": "won",
+     "score": "0-3"
+    },
+    {
+     "match": "Nancy v Dijon",
+     "market": "Nancy 1UP",
+     "odds": "1.37",
+     "r": "won",
+     "score": "1-0"
+    },
+    {
+     "match": "Metz v Boulogne",
+     "market": "Metz DC 1UP 1X",
+     "odds": "1.25",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "match": "Red Star v Pau",
+     "market": "Red Star DC 1UP 1X",
+     "odds": "1.23",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "match": "Annecy v Clermont",
+     "market": "Annecy DC 1UP 1X",
+     "odds": "1.28",
+     "r": "won",
+     "score": "4-2"
+    }
+   ]
+  },
+  {
+   "code": "BM9HHTH",
+   "from": "GURFYDP",
+   "date": "2026-11-20",
+   "legs": 5,
+   "odds": 3.07,
+   "status": "lost",
+   "ait": -2,
+   "note": "Goals slip from GURFYDP. Approved and posted 20 Nov. LOST 2/5: Ipswich U21 2-1 Porto B (X2), Verona 0-2 Cesena (1UP), Bayern 1-1 Cologne (Bayern O2.5).",
+   "legsList": [
+    {
+     "match": "WBA U21 v Coventry U21",
+     "market": "Over 2.5",
+     "odds": "1.27",
+     "r": "won",
+     "score": "2-1"
+    },
+    {
+     "match": "Ipswich U21 v Porto B",
+     "market": "Porto B DC X2",
+     "odds": "1.11",
+     "r": "lost",
+     "score": "2-1"
+    },
+    {
+     "match": "Leeds U21 v Charlton U21",
+     "market": "Over 2.5",
+     "odds": "1.27",
+     "r": "won",
+     "score": "1-2"
+    },
+    {
+     "match": "Verona v Cesena",
+     "market": "Verona 1UP",
+     "odds": "1.33",
+     "r": "lost",
+     "score": "0-2"
+    },
+    {
+     "match": "Bayern v Cologne",
+     "market": "Bayern Over 2.5 goals",
+     "odds": "1.29",
+     "r": "lost",
+     "score": "1-1"
+    }
+   ]
+  },
+  {
+   "code": "2CJBE1E",
+   "from": "GURFYDP",
+   "date": "2026-11-20",
+   "legs": 5,
+   "odds": 3.12,
+   "status": "lost",
+   "ait": -2,
+   "note": "Late slip from GURFYDP. Approved and posted 20 Nov. LOST 3/5: Andorra 1-3 Leganes (1X), Bilbao 0-1 Espanyol (1UP).",
+   "legsList": [
+    {
+     "match": "Andorra v Leganes",
+     "market": "Andorra DC 1X",
+     "odds": "1.25",
+     "r": "lost",
+     "score": "1-3"
+    },
+    {
+     "match": "Troyes v Le Havre",
+     "market": "Troyes DC 1UP 1X",
+     "odds": "1.25",
+     "r": "won",
+     "score": "3-1"
+    },
+    {
+     "match": "Southend v Boreham Wood",
+     "market": "Boreham Wood DC 1UP X2",
+     "odds": "1.24",
+     "r": "won",
+     "score": "2-3"
+    },
+    {
+     "match": "Athletic Bilbao v Espanyol",
+     "market": "Bilbao 1UP",
+     "odds": "1.28",
+     "r": "lost",
+     "score": "0-1"
+    },
+    {
+     "match": "Barnsley v Sheffield Wed",
+     "market": "Sheffield Wed DC 1UP X2",
+     "odds": "1.26",
+     "r": "won",
+     "score": "1-2"
+    }
+   ]
+  }
+ ],
+ "favorites": [
+  {
+   "kind": "market",
+   "order": 1,
+   "name": "Over 1.5 / Over 2.5",
+   "market": "",
+   "record": "13 won, 1 lost",
+   "verdict": "Main market",
+   "vclass": "good",
+   "evidence": "Only loss: Grêmio 0-0 Bahia (Over 1.5, 19 Nov). Won in Women's Champions League, Gulf leagues, Brazil and Nations League.",
+   "since": "2026-11-17",
+   "id": "market-over-1-5-over-2-5"
+  },
+  {
+   "kind": "market",
+   "order": 2,
+   "name": "1UP, DC 1UP, To qualify",
+   "market": "",
+   "record": "7 of 7 won",
+   "verdict": "Main market",
+   "vclass": "good",
+   "evidence": "Mallorca 1UP, Espanyol W 1UP, Copa del Rey qualifiers (Sabadell, Tenerife), Nations League DC 1UP.",
+   "since": "2026-11-17",
+   "id": "market-1up-dc-1up-to-qualify"
+  },
+  {
+   "kind": "market",
+   "order": 3,
+   "name": "BTTS",
+   "market": "",
+   "record": "All won",
+   "verdict": "Use more",
+   "vclass": "good",
+   "evidence": "Nations League: Denmark 2-3 Norway, Wales 2-3 Portugal.",
+   "since": "2026-11-17",
+   "id": "market-btts"
+  },
+  {
+   "kind": "market",
+   "order": 4,
+   "name": "Unders in low-scoring leagues",
+   "market": "",
+   "record": "2 of 2 won",
+   "verdict": "Use selectively",
+   "vclass": "good",
+   "evidence": "Algeria: Rouissat v Belouizdad 1-0 (Under 1.5), MC Alger v Akbou 0-1 (Under 3.5).",
+   "since": "2026-11-17",
+   "id": "market-unders-in-low-scoring-leagues"
+  },
+  {
+   "kind": "market",
+   "order": 5,
+   "name": "Double chance 1X / X2",
+   "market": "",
+   "record": "3 won, 1 lost",
+   "verdict": "Home sides only",
+   "vclass": "watch",
+   "evidence": "Won: Corinthians 4-0, Peñarol 3-0, Progreso 1-1. Lost: Boston River 1-0 Maldonado (X2 away).",
+   "since": "2026-11-17",
+   "id": "market-double-chance-1x-x2"
+  },
+  {
+   "kind": "market",
+   "order": 6,
+   "name": "Double chance 12",
+   "market": "",
+   "record": "2 won, 1 lost",
+   "verdict": "Risky in tight games",
+   "vclass": "watch",
+   "evidence": "Won: Remo 2-0, Forest U21 v Newcastle U21 2-3. Lost: Lions 1-1 Wollongong.",
+   "since": "2026-11-17",
+   "id": "market-double-chance-12"
+  },
+  {
+   "kind": "market",
+   "order": 7,
+   "name": "Straight win in internationals/U21",
+   "market": "",
+   "record": "4 lost",
+   "verdict": "Avoid",
+   "vclass": "bad",
+   "evidence": "Czechia U21 1-1, Sierra Leone 1-1 Congo DR, Iraq 1-1 Iran, Independiente W 1-2 (17 Nov).",
+   "since": "2026-11-17",
+   "id": "market-straight-win-in-internationals-u21"
+  },
+  {
+   "kind": "league",
+   "order": 1,
+   "name": "Women's Champions League",
+   "market": "Over 1.5 / 2.5, favourite to win",
+   "record": "5 of 5 won",
+   "verdict": "Strong",
+   "vclass": "good",
+   "evidence": "Bayern W 4-0 away, Real Madrid W 3-1, Arsenal W v Lyon W 0-2, Benfica W v Roma W 2-3, Paris FC W v Koge W 2-1.",
+   "since": "2026-11-17",
+   "id": "league-women-s-champions-league"
+  },
+  {
+   "kind": "league",
+   "order": 2,
+   "name": "UEFA Nations League",
+   "market": "Over/under, BTTS, DC 1UP",
+   "record": "16 of 16 won",
+   "verdict": "Strong",
+   "vclass": "good",
+   "evidence": "Two 8-leg slips on 17 Nov won in full (287P1TW and Bet 13896497278).",
+   "since": "2026-11-17",
+   "id": "league-uefa-nations-league"
+  },
+  {
+   "kind": "league",
+   "order": 3,
+   "name": "Copa del Rey",
+   "market": "To qualify, 1UP",
+   "record": "3 of 3 won",
+   "verdict": "Strong",
+   "vclass": "good",
+   "evidence": "Sabadell won 0-3 at Utebo, Mallorca 1UP at Alcoyano (0-1), Tenerife won 2-5 at Badajoz.",
+   "since": "2026-11-17",
+   "id": "league-copa-del-rey"
+  },
+  {
+   "kind": "league",
+   "order": 4,
+   "name": "UAE Pro League / Qatar Stars League",
+   "market": "Over 1.5 / 2.5",
+   "record": "3 of 3 won",
+   "verdict": "Strong",
+   "vclass": "good",
+   "evidence": "Al Ain 2-1 Al Dhafra (on two slips), Al Ahli Doha 1-1 Al-Shamal.",
+   "since": "2026-11-17",
+   "id": "league-uae-pro-league-qatar-stars-league"
+  },
+  {
+   "kind": "league",
+   "order": 5,
+   "name": "Algeria Ligue 1",
+   "market": "Unders",
+   "record": "2 of 2 won",
+   "verdict": "Use selectively",
+   "vclass": "good",
+   "evidence": "Rouissat v Belouizdad 1-0, MC Alger v Akbou 0-1.",
+   "since": "2026-11-17",
+   "id": "league-algeria-ligue-1"
+  },
+  {
+   "kind": "league",
+   "order": 6,
+   "name": "Brazil Série A",
+   "market": "Over 1.5, home double chance",
+   "record": "4 won, 1 lost",
+   "verdict": "Good, watch 0-0 risk",
+   "vclass": "watch",
+   "evidence": "Won: Flamengo 2-1, Cruzeiro 2-1, Corinthians 4-0, Remo 2-0. Lost: Grêmio 0-0 Bahia.",
+   "since": "2026-11-17",
+   "id": "league-brazil-serie-a"
+  },
+  {
+   "kind": "league",
+   "order": 7,
+   "name": "Uruguay Primera",
+   "market": "Double chance",
+   "record": "2 won, 1 lost",
+   "verdict": "Watch",
+   "vclass": "watch",
+   "evidence": "Won: Peñarol 3-0, Progreso 1-1. Lost: Boston River 1-0 Maldonado.",
+   "since": "2026-11-17",
+   "id": "league-uruguay-primera"
+  },
+  {
+   "kind": "league",
+   "order": 8,
+   "name": "Internationals & U21 friendlies",
+   "market": "Not straight wins",
+   "record": "4 lost",
+   "verdict": "Avoid straight wins",
+   "vclass": "bad",
+   "evidence": "Three 1-1 draws on 17 Nov sank two slips; goal markets in the same games won.",
+   "since": "2026-11-17",
+   "id": "league-internationals-u21-friendlies"
+  },
+  {
+   "kind": "team",
+   "order": 1,
+   "name": "Al Ain",
+   "market": "Over 2.5",
+   "record": "2 of 2 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Al Ain 2-1 Al Dhafra, UAE Pro League, 19 Nov.",
+   "since": "2026-11-17",
+   "id": "team-al-ain"
+  },
+  {
+   "kind": "team",
+   "order": 2,
+   "name": "Bayern W",
+   "market": "Win / Over 2.5",
+   "record": "1 of 1 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Won 4-0 away at Austria Wien W, Women's Champions League.",
+   "since": "2026-11-17",
+   "id": "team-bayern-w"
+  },
+  {
+   "kind": "team",
+   "order": 3,
+   "name": "Real Madrid W",
+   "market": "Win",
+   "record": "1 of 1 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Beat Inter W 3-1, Women's Champions League.",
+   "since": "2026-11-17",
+   "id": "team-real-madrid-w"
+  },
+  {
+   "kind": "team",
+   "order": 4,
+   "name": "Flamengo",
+   "market": "Over 1.5",
+   "record": "1 of 1 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Flamengo 2-1 Paranaense, Brazil Série A.",
+   "since": "2026-11-17",
+   "id": "team-flamengo"
+  },
+  {
+   "kind": "team",
+   "order": 5,
+   "name": "Corinthians",
+   "market": "Home 1X",
+   "record": "1 of 1 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Corinthians 4-0 Botafogo, Brazil Série A.",
+   "since": "2026-11-17",
+   "id": "team-corinthians"
+  },
+  {
+   "kind": "team",
+   "order": 6,
+   "name": "Peñarol",
+   "market": "Home 1X",
+   "record": "1 of 1 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Peñarol 3-0 Cerro Largo, Uruguay Primera.",
+   "since": "2026-11-17",
+   "id": "team-penarol"
+  },
+  {
+   "kind": "team",
+   "order": 7,
+   "name": "Arsenal W v Lyon W",
+   "market": "Over 1.5",
+   "record": "1 of 1 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Finished 0-2, Women's Champions League.",
+   "since": "2026-11-17",
+   "id": "team-arsenal-w-v-lyon-w"
+  },
+  {
+   "kind": "team",
+   "order": 8,
+   "name": "Benfica W v Roma W",
+   "market": "Over 1.5",
+   "record": "1 of 1 won",
+   "verdict": "Watch (small sample)",
+   "vclass": "watch",
+   "evidence": "Finished 2-3, Women's Champions League.",
+   "since": "2026-11-17",
+   "id": "team-benfica-w-v-roma-w"
+  },
+  {
+   "kind": "try",
+   "order": 1,
+   "name": "Premier League, Serie A",
+   "market": "Over 1.5, DC 1UP",
+   "record": "Not tested yet",
+   "verdict": "To test",
+   "vclass": "test",
+   "evidence": "Top leagues with plenty of data.",
+   "since": "2026-11-17",
+   "id": "try-premier-league-serie-a"
+  },
+  {
+   "kind": "try",
+   "order": 2,
+   "name": "Eredivisie, Bundesliga",
+   "market": "Over 2.5, BTTS",
+   "record": "Not tested yet",
+   "verdict": "To test",
+   "vclass": "test",
+   "evidence": "Among the highest-scoring leagues.",
+   "since": "2026-11-17",
+   "id": "try-eredivisie-bundesliga"
+  },
+  {
+   "kind": "try",
+   "order": 3,
+   "name": "Portugal Liga, Turkish Süper Lig",
+   "market": "Big-three teams 1UP",
+   "record": "Not tested yet",
+   "verdict": "To test",
+   "vclass": "test",
+   "evidence": "Clear favourites most weeks.",
+   "since": "2026-11-17",
+   "id": "try-portugal-liga-turkish-super-lig"
+  },
+  {
+   "kind": "try",
+   "order": 4,
+   "name": "Premier League Cup (U21)",
+   "market": "Over 2.5",
+   "record": "Testing in BM9HHTH (20 Nov)",
+   "verdict": "To test",
+   "vclass": "test",
+   "evidence": "U21 games are usually high-scoring.",
+   "since": "2026-11-17",
+   "id": "try-premier-league-cup-u21"
+  },
+  {
+   "kind": "try",
+   "order": 5,
+   "name": "Any league",
+   "market": "Corners, cards, team Over 0.5",
+   "record": "Not tested yet",
+   "verdict": "To test",
+   "vclass": "test",
+   "evidence": "Markets we haven't used at all yet.",
+   "since": "2026-11-17",
+   "id": "try-any-league"
+  }
+ ]
 }
