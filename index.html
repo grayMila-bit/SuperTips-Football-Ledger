@@ -107,6 +107,20 @@ td.num,th.num{text-align:right}
 .tile.t-ait{border-color:var(--won);background:rgba(141,198,63,.12)} .tile.t-ait .v,.tile.t-ait .k{color:var(--won)}
 .tile.t-ait.neg{border-color:var(--lost);background:rgba(226,99,79,.12)} .tile.t-ait.neg .v,.tile.t-ait.neg .k{color:var(--lost)}
 .tile[aria-pressed="true"]{box-shadow:0 0 0 2px currentColor inset}
+.favlist{display:flex;flex-direction:column;gap:8px}
+.fav{background:#232723;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.fav-head{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:12px 14px;cursor:pointer;min-height:48px}
+.fav-head:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+.fav-head .nm{font-weight:700}
+.fav-head .mk{margin:4px 0 0}
+.fav-head[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.fav-body{display:none;border-top:1px solid var(--line);padding:10px 14px 12px}
+.fav.open .fav-body{display:block}
+.fav-body dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14px}
+.fav-body dt{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+.fav-body dd{margin:0}
+.vd{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
+.vd.good{background:var(--won);color:#141614} .vd.watch{background:#d9a441;color:#141614} .vd.bad{background:var(--lost);color:#fff} .vd.test{background:var(--pending);color:#141614}
 footer{font-size:12px;color:var(--muted);line-height:1.6}
 </style>
 </head>
@@ -155,14 +169,16 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
     <div class="cards" id="slips"></div>
   </section>
 
-  <section class="panel">
-    <h2>Favourite teams by market</h2>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Team</th><th>League</th><th>Strong markets</th><th>Why</th></tr></thead>
-        <tbody id="favs"></tbody>
-      </table>
+  <section class="panel" id="favs-sec">
+    <h2>Favourites</h2>
+    <p class="note" style="margin:0 0 12px">Built from our settled slips since 17 Nov. Tap any favourite to see its record, verdict and evidence.</p>
+    <div class="filters" role="tablist" aria-label="Favourite type">
+      <button class="fbtn ftab" role="tab" data-k="market" aria-pressed="true">Markets<span class="n" id="fk-market"></span></button>
+      <button class="fbtn ftab" role="tab" data-k="league" aria-pressed="false">Leagues<span class="n" id="fk-league"></span></button>
+      <button class="fbtn ftab" role="tab" data-k="team" aria-pressed="false">Teams<span class="n" id="fk-team"></span></button>
+      <button class="fbtn ftab" role="tab" data-k="try" aria-pressed="false">To try<span class="n" id="fk-try"></span></button>
     </div>
+    <div class="favlist" id="favs"></div>
   </section>
 
   <footer>Join the channel for daily slips and live results: <a href="https://t.me/SuperTipsBetpawaFootball" style="color:var(--green);font-weight:600">t.me/SuperTipsBetpawaFootball</a><br>View only. Results are recorded by SuperTips Football Data and cannot be edited from this page. Not affiliated with betPawa. 18+ | 25+ in Uganda | No guarantees. Bet only what you can afford to lose.<br>© All rights to change and update information are reserved only to Mila Junior 2026 and associates.</footer>
@@ -252,15 +268,28 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
     drawPie(c);
     ["all","pending","won","lost"].forEach(function(k){var e=document.getElementById("f-"+k);if(e)e.textContent=k==="all"?slips.length:c[k];});
     renderCards();
-    var fb=document.getElementById("favs");
-    if(!favs.length){fb.innerHTML='<tr><td colspan="4" class="empty">No favourites recorded yet.</td></tr>';}
-    else{
-      fb.innerHTML=favs.slice().sort(function(a,b){return String(a.league||"").localeCompare(String(b.league||""))||String(a.team||"").localeCompare(String(b.team||""));}).map(function(f){
-        var mk=(Array.isArray(f.markets)?f.markets:[]).map(function(m){return "<span class='mk'>"+esc(m)+"</span>";}).join("");
-        return "<tr><td><strong>"+esc(f.team)+"</strong></td><td>"+esc(f.league)+"</td><td>"+mk+"</td><td class='note'>"+esc(f.why)+"</td></tr>";
-      }).join("");
-    }
+    renderFavs();
   }
+  var favKind="market",favOpen={};
+  function favNorm(f){return {id:f.id||f.team||f.name,kind:f.kind||"team",order:Number(f.order)||99,name:f.name||f.team||"",
+    market:f.market||(Array.isArray(f.markets)?f.markets.join(", "):""),record:f.record||"",verdict:f.verdict||"",vclass:f.vclass||"test",evidence:f.evidence||f.why||"",league:f.league||""};}
+  function renderFavs(){
+    var all=favs.map(favNorm),box=document.getElementById("favs");
+    ["market","league","team","try"].forEach(function(k){var e=document.getElementById("fk-"+k);if(e)e.textContent=all.filter(function(f){return f.kind===k;}).length;});
+    var list=all.filter(function(f){return f.kind===favKind;}).sort(function(a,b){return a.order-b.order||a.name.localeCompare(b.name);});
+    if(!list.length){box.innerHTML="<p class='empty'>No favourites recorded yet.</p>";return;}
+    box.innerHTML=list.map(function(f){
+      var o=!!favOpen[f.id],bid="fv-"+String(f.id).replace(/\W/g,"");
+      var rows=(f.record?"<dt>Record</dt><dd>"+esc(f.record)+"</dd>":"")+(f.verdict?"<dt>Verdict</dt><dd><span class='vd "+esc(f.vclass)+"'>"+esc(f.verdict)+"</span></dd>":"")+(f.evidence?"<dt>Evidence</dt><dd class='note' style='color:var(--ink)'>"+esc(f.evidence)+"</dd>":"")+(f.league&&f.kind==="team"?"<dt>League</dt><dd>"+esc(f.league)+"</dd>":"");
+      return "<div class='fav"+(o?" open":"")+"'><button class='fav-head' aria-expanded='"+o+"' aria-controls='"+bid+"' data-fav='"+esc(f.id)+"'><span><span class='nm'>"+esc(f.name)+"</span>"+(f.market?"<br><span class='mk'>"+esc(f.market)+"</span>":"")+"</span><span class='chev' aria-hidden='true'>&#9662;</span></button><div class='fav-body' id='"+bid+"'><dl>"+rows+"</dl></div></div>";
+    }).join("");
+  }
+  document.addEventListener("click",function(e){
+    var t=e.target.closest(".ftab");
+    if(t){favKind=t.getAttribute("data-k");document.querySelectorAll(".ftab").forEach(function(b){b.setAttribute("aria-pressed",b===t?"true":"false");});renderFavs();return;}
+    var h=e.target.closest(".fav-head");
+    if(h){var id=h.getAttribute("data-fav"),card=h.parentNode,o=!card.classList.contains("open");card.classList.toggle("open",o);h.setAttribute("aria-expanded",o);favOpen[id]=o;}
+  });
   function drawPie(c){
     var svg=document.getElementById("pie"),leg=document.getElementById("legend");
     var keys=["won","lost","pending","void"],parts=keys.filter(function(k){return c[k]>0;});
