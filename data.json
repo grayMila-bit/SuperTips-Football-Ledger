@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T16:45:00+03:00",
+ "updated": "2026-11-21T19:37:00+03:00",
  "slips": [
   {
    "code": "5AASQJY",
@@ -508,6 +508,102 @@
      "odds": "1.26",
      "r": "won",
      "score": "1-2"
+    }
+   ]
+  },
+  {
+   "code": "XP8JDB6",
+   "from": "new",
+   "date": "2026-11-21",
+   "legs": 6,
+   "odds": 2.99,
+   "status": "pending",
+   "ait": 0,
+   "note": "High probability (Sat night, 1UP-led). Approved and posted 21 Nov.",
+   "legsList": [
+    {
+     "match": "Parma v Roma",
+     "market": "Roma 1UP",
+     "odds": "1.14",
+     "r": "pending"
+    },
+    {
+     "match": "Newcastle v Arsenal",
+     "market": "Arsenal 1UP",
+     "odds": "1.30",
+     "r": "pending"
+    },
+    {
+     "match": "Schalke v Stuttgart",
+     "market": "Over 1.5",
+     "odds": "1.14",
+     "r": "pending"
+    },
+    {
+     "match": "Napoli v Torino",
+     "market": "Napoli 1UP",
+     "odds": "1.30",
+     "r": "pending"
+    },
+    {
+     "match": "Monaco v Auxerre",
+     "market": "Monaco 1UP",
+     "odds": "1.23",
+     "r": "pending"
+    },
+    {
+     "match": "Real Madrid v Celta",
+     "market": "Real Madrid 1UP",
+     "odds": "1.11",
+     "r": "pending"
+    }
+   ]
+  },
+  {
+   "code": "GJVVSU5",
+   "from": "new",
+   "date": "2026-11-22",
+   "legs": 6,
+   "odds": 3.35,
+   "status": "pending",
+   "ait": 0,
+   "note": "High probability (Sunday, all 1UP). Approved and posted 21 Nov.",
+   "legsList": [
+    {
+     "match": "Juventus v Venezia",
+     "market": "Juventus 1UP",
+     "odds": "1.22",
+     "r": "pending"
+    },
+    {
+     "match": "Barcelona v Villarreal",
+     "market": "Barcelona 1UP",
+     "odds": "1.11",
+     "r": "pending"
+    },
+    {
+     "match": "Paris FC v Angers",
+     "market": "Paris FC 1UP",
+     "odds": "1.20",
+     "r": "pending"
+    },
+    {
+     "match": "Hull v Brighton",
+     "market": "Brighton 1UP",
+     "odds": "1.29",
+     "r": "pending"
+    },
+    {
+     "match": "AC Milan v Frosinone",
+     "market": "AC Milan 1UP",
+     "odds": "1.27",
+     "r": "pending"
+    },
+    {
+     "match": "Marseille v Le Mans",
+     "market": "Marseille 1UP",
+     "odds": "1.26",
+     "r": "pending"
     }
    ]
   }
