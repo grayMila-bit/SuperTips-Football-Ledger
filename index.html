@@ -122,6 +122,11 @@ td.num,th.num{text-align:right}
 .vd{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
 .vd.good{background:var(--won);color:#141614} .vd.watch{background:#d9a441;color:#141614} .vd.bad{background:var(--lost);color:#fff} .vd.test{background:var(--pending);color:#141614}
 footer{font-size:12px;color:var(--muted);line-height:1.6}
+.live{font-size:12px;margin-top:3px;color:var(--muted);display:flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums}
+.live.in{color:var(--ink)} .live.won{color:var(--won)} .live.lost{color:var(--lost)}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--lost);display:inline-block;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.live-status{margin-top:2px}
 </style>
 </head>
 <body>
@@ -135,6 +140,7 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
       </div>
     </div>
     <div class="status" id="status" role="status"><i></i><span id="status-text">Updated 18 Nov 2026, 20:30 EAT</span></div>
+    <div class="status live-status"><span id="live-text">Checking live scores…</span></div>
   </header>
 
   <section class="summary" aria-label="Summary">
@@ -194,7 +200,7 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
   var slips=snap.slips||[],favs=snap.favorites||[];
   var stText=document.getElementById("status-text");
 
-  var filter="all",openSet={};
+  var filter="all",openSet={},LIVE={};
   function legsOf(s){
     if(Array.isArray(s.legsList))return s.legsList;
     var n=String(s.note||"");
@@ -215,7 +221,7 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
     box.innerHTML=list.map(function(s,i){
       var st=COLORS[s.status]?s.status:"pending",odds=Number(s.odds),id="sl-"+esc(s.code).replace(/\W/g,"");
       var legs=legsOf(s),open=!!openSet[s.code];
-      var legHtml=legs.length?legs.map(function(l){return "<div class='leg'><div><div class='m'>"+esc(l.match)+"</div>"+(l.time?"<div style='color:var(--muted);font-size:12px'>"+esc(l.time)+"</div>":"")+(l.market?"<div class='mk2'>"+esc(l.market)+"</div>":"")+"</div><div class='o'>"+(l.score?"<span style='color:var(--muted);font-weight:500'>"+esc(l.score)+"</span> ":"")+(l.odds?esc(l.odds):"")+"<i class='dot' style='background:var("+COLORS[COLORS[l.r]?l.r:(st==="won"?"won":"pending")]+")'></i></div></div>";}).join(""):"";
+      var legHtml=legs.length?legs.map(function(l,li){var lv=(st==="pending"&&(!l.r||l.r==="pending"))?LIVE[s.code+"#"+li]:null;return "<div class='leg'><div><div class='m'>"+esc(l.match)+"</div>"+(l.time?"<div style='color:var(--muted);font-size:12px'>"+esc(l.time)+"</div>":"")+(l.market?"<div class='mk2'>"+esc(l.market)+"</div>":"")+(lv?"<div class='live "+lv.cls+"'>"+(lv.state==="in"?"<i></i>":"")+esc(lv.text)+"</div>":"")+"</div><div class='o'>"+(l.score?"<span style='color:var(--muted);font-weight:500'>"+esc(l.score)+"</span> ":"")+(l.odds?esc(l.odds):"")+"<i class='dot' style='background:var("+COLORS[COLORS[l.r]?l.r:(lv&&lv.res?lv.res:(st==="won"?"won":"pending"))]+")'></i></div></div>";}).join(""):"";
       var noteHtml=(!legs.length||/\b(won|lost|\d-\d)\b/i.test(s.note||""))?"<div class='leg'><div class='note' style='color:var(--ink)'>"+esc(s.note)+"</div></div>":"";
       return "<article class='slip "+st+(open?" open":"")+"'>"+
         "<button class='slip-head' aria-expanded='"+open+"' aria-controls='"+id+"' data-code='"+esc(s.code)+"'>"+
@@ -311,10 +317,63 @@ footer{font-size:12px;color:var(--muted);line-height:1.6}
     svg.innerHTML=html;
     leg.innerHTML=keys.map(function(k){var pct=total?Math.round(c[k]/total*100):0;return "<span><i class='dot' style='background:var("+COLORS[k]+")'></i>"+k[0].toUpperCase()+k.slice(1)+" "+c[k]+" ("+pct+"%)</span>";}).join("");
   }
-  render();
+
+  /* ---- Live scores (display only; the ledger record is set by the results watcher) ---- */
+  var LEAGUES=["basketball/nba","soccer/eng.1","soccer/eng.2","soccer/esp.1","soccer/ita.1","soccer/ita.2","soccer/ger.1","soccer/fra.1","soccer/ned.1","soccer/por.1","soccer/uefa.champions","soccer/uefa.europa","soccer/uefa.europa.conf","soccer/eng.league_cup","soccer/eng.fa"];
+  var liveTimer=null,liveOk=null;
+  function norm(t){return String(t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/\b(fc|cf|ac|afc|sc|ssc|as|us|rc|cd|ud|sd|bc|club|de|the)\b/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();}
+  function names(c){var t=c.team||{};return [t.displayName,t.shortDisplayName,t.name,t.location,t.nickname,t.abbreviation].filter(Boolean).map(norm).filter(Boolean);}
+  function hit(side,c){var a=norm(side);if(!a)return false;return names(c).some(function(n){return n===a||(a.length>2&&(n.indexOf(a)>=0||a.indexOf(n)>=0&&n.length>3));});}
+  function ymd(d){return d.getUTCFullYear()+String(d.getUTCMonth()+1).padStart(2,"0")+String(d.getUTCDate()).padStart(2,"0");}
+  function evalLeg(market,home,away,hs,as,state){
+    var m=String(market||""),ml=m.toLowerCase(),tot=hs+as,fin=state==="post",side=null;
+    if(hit(m.replace(/\b(win|1up|2up|dc|to qualify|draw no bet|dnb)\b.*$/i,""),home))side="h";else if(hit(m.replace(/\b(win|1up|2up|dc|to qualify|draw no bet|dnb)\b.*$/i,""),away))side="a";
+    var mine=side==="h"?hs:as,their=side==="h"?as:hs;
+    var ou=ml.match(/\b(over|under|o|u)\s?(\d+(?:\.\d+)?)/);
+    if(ou&&!/\b(corner|card|booking)/.test(ml)){var line=parseFloat(ou[2]),over=ou[1][0]==="o";
+      if(over)return tot>line?"won":fin?"lost":null; return tot>line?"lost":fin?"won":null;}
+    if(/btts|both teams/.test(ml)){var no=/\bno\b/.test(ml);if(hs>0&&as>0)return no?"lost":"won";return fin?(no?"won":"lost"):null;}
+    if(/\b(1x|x2|12)\b/.test(ml)&&!side){var k=ml.match(/\b(1x|x2|12)\b/)[1];var ok=k==="1x"?hs>=as:k==="x2"?as>=hs:hs!==as;
+      if(/1up/.test(ml)&&((k!=="x2"&&hs>as)||(k!=="1x"&&as>hs)))return "won";return fin?(ok?"won":"lost"):null;}
+    if(!side)return null;
+    if(/1up|2up/.test(ml)){var need=/2up/.test(ml)?2:1;if(mine-their>=need)return "won";if(/\bdc\b/.test(ml))return fin?(mine>=their?"won":"lost"):null;return null;}
+    if(/\bdc\b|double chance/.test(ml))return fin?(mine>=their?"won":"lost"):null;
+    if(/win|moneyline|\bml\b/.test(ml))return fin?(mine>their?"won":"lost"):null;
+    return null;
+  }
+  function refreshLive(){
+    var pend=slips.filter(function(s){return (s.status||"pending")==="pending"&&legsOf(s).length;});
+    if(!pend.length){LIVE={};return;}
+    var dates={};pend.forEach(function(s){var d=new Date(String(s.date)+"T12:00:00Z");if(isNaN(d))return;[-1,0,1].forEach(function(k){dates[ymd(new Date(d.getTime()+k*864e5))]=1;});});
+    var urls=[];Object.keys(dates).forEach(function(d){LEAGUES.forEach(function(l){urls.push("https://site.api.espn.com/apis/site/v2/sports/"+l+"/scoreboard?dates="+d);});});
+    Promise.all(urls.map(function(u){return fetch(u).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});})).then(function(res){
+      var evs=[],got=0;res.forEach(function(j){if(j){got++;(j.events||[]).forEach(function(e){evs.push(e);});}});
+      liveOk=got>0;var next={},anyLive=false;
+      pend.forEach(function(s){legsOf(s).forEach(function(l,i){
+        if(l.r&&l.r!=="pending")return;
+        var sides=String(l.match||"").split(/\s+(?:v|vs|@|-)\s+/i);if(sides.length<2)return;
+        for(var k=0;k<evs.length;k++){var c=((evs[k].competitions||[])[0]||{}),cs=c.competitors||[];
+          var h=cs.filter(function(x){return x.homeAway==="home";})[0],a=cs.filter(function(x){return x.homeAway==="away";})[0];if(!h||!a)continue;
+          var p1=hit(sides[0],h)&&hit(sides[1],a),p2=hit(sides[0],a)&&hit(sides[1],h);if(!p1&&!p2)continue;
+          var stt=((c.status||evs[k].status||{}).type)||{},state=stt.state||"pre",hs=parseInt(h.score,10)||0,as=parseInt(a.score,10)||0;
+          var res=state==="pre"?null:evalLeg(l.market,h,a,hs,as,state);
+          var sc=(p1?hs+"-"+as:as+"-"+hs);
+          var txt=state==="pre"?"Not started":(state==="in"?"LIVE "+sc+" · "+(stt.shortDetail||""):"FT "+sc);
+          if(res)txt+=res==="won"?" · leg ✓":" · leg ✗";
+          if(state==="in")anyLive=true;
+          next[s.code+"#"+i]={state:state,text:txt,res:res,cls:res||state};break;}
+        if(!next[s.code+"#"+i]&&liveOk)next[s.code+"#"+i]={state:"na",text:"No live feed for this game, check manually",res:null,cls:"na"};
+      });});
+      LIVE=next;renderCards();
+      var el=document.getElementById("live-text");if(el)el.textContent=liveOk?("Live scores "+(anyLive?"on":"checked")+" "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})+" · unofficial, the ledger record is final"):"Live scores unavailable right now";
+      clearTimeout(liveTimer);liveTimer=setTimeout(refreshLive,anyLive?60000:300000);
+    });
+  }
+  document.addEventListener("visibilitychange",function(){if(!document.hidden)refreshLive();});
+  render();refreshLive();
 
   fetch("data.json?ts="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
-    slips=d.slips||[];favs=d.favorites||[];render();
+    slips=d.slips||[];favs=d.favorites||[];render();refreshLive();
     if(d.updated)stText.textContent="Updated "+d.updated;
   }).catch(function(){});
 })();
