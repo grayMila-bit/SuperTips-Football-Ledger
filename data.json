@@ -642,6 +642,42 @@
           "r": "pending"
         }
       ]
+    },
+    {
+      "code": "I2NBA0P",
+      "from": "4TC5Q1H",
+      "date": "2026-11-22",
+      "legs": 4,
+      "odds": 2.07,
+      "status": "pending",
+      "ait": 0,
+      "note": "High probability, cleaned from 4TC5Q1H (4 high-risk legs removed). Approved and posted 22 Nov.",
+      "legsList": [
+        {
+          "match": "AC Milan v Frosinone",
+          "market": "AC Milan 1UP",
+          "odds": "1.28",
+          "r": "pending"
+        },
+        {
+          "match": "Osasuna v Malaga",
+          "market": "Osasuna DC 1UP 1X",
+          "odds": "1.17",
+          "r": "pending"
+        },
+        {
+          "match": "Marseille v Le Mans",
+          "market": "Marseille 1UP",
+          "odds": "1.24",
+          "r": "pending"
+        },
+        {
+          "match": "Getafe v Atletico Madrid",
+          "market": "Atletico DC 1UP X2",
+          "odds": "1.12",
+          "r": "pending"
+        }
+      ]
     }
   ],
   "favorites": [
