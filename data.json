@@ -678,6 +678,72 @@
           "r": "pending"
         }
       ]
+    },
+    {
+      "code": "SD5HZSK",
+      "from": "MNR9XVU",
+      "date": "2026-11-25",
+      "legs": 9,
+      "odds": 12.99,
+      "status": "pending",
+      "ait": 0,
+      "note": "UCL Wednesday, worked from MNR9XVU. Approved and posted 25 Nov.",
+      "legsList": [
+        {
+          "match": "Slavia v Villarreal",
+          "market": "Villarreal 1UP",
+          "odds": "1.57",
+          "r": "pending"
+        },
+        {
+          "match": "Sabah v Barcelona",
+          "market": "Barcelona win & Over 3.5",
+          "odds": "1.39",
+          "r": "pending"
+        },
+        {
+          "match": "Shakhtar v Fenerbahce",
+          "market": "Over 1.5",
+          "odds": "1.24",
+          "r": "pending"
+        },
+        {
+          "match": "Sporting v Man Utd",
+          "market": "Man Utd 1UP",
+          "odds": "1.63",
+          "r": "pending"
+        },
+        {
+          "match": "Atletico Madrid v Viking",
+          "market": "Atletico Over 1.5 goals",
+          "odds": "1.12",
+          "r": "pending"
+        },
+        {
+          "match": "Inter v Stuttgart",
+          "market": "Inter 1UP",
+          "odds": "1.19",
+          "r": "pending"
+        },
+        {
+          "match": "Lille v Bayern",
+          "market": "Bayern 1UP",
+          "odds": "1.35",
+          "r": "pending"
+        },
+        {
+          "match": "Club Brugge v Liverpool",
+          "market": "Liverpool 1UP",
+          "odds": "1.30",
+          "r": "pending"
+        },
+        {
+          "match": "PSG v Roma",
+          "market": "PSG 1UP",
+          "odds": "1.26",
+          "r": "pending"
+        }
+      ]
     }
   ],
   "favorites": [
